@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -26,8 +25,7 @@
 </script>
 
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YB6G48MD78"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-YB6G48MD78"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,8 +33,8 @@
 
   gtag('config', 'G-YB6G48MD78');
 </script>
-<title>PerlのgrepはUnix/Linuxコマンドのgrepから着想を得ている - Perl Philosophy - Resolve the Mis-Understanding of Perl</title>
-<meta name="description" content="Perlにはgrepと呼ばれる関数がありますが、これは、PerlのgrepはUnix/Linuxコマンドのgrepから着想を得ています。">
+<title> Perl's grep is inspired by the Unix / Linux command grep  - Perl Philosophy - Resolve the Mis-Understanding of Perl</title>
+<meta name="description" content="Perl has a function called grep, which is inspired by Perl's grep from the Unix / Linux command grep.">
   </head>
   <body>
     <div class="container">
@@ -53,12 +51,11 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <h2><a href="/blog/20191003071444.html">PerlのgrepはUnix/Linuxコマンドのgrepから着想を得ている</a></h2>
+    <h2><a href="/blog/20191003071444.html"> Perl's grep is inspired by the Unix / Linux command grep </a></h2>
 <p>
-  Perlにはgrepと呼ばれる関数がありますが、これは、PerlのgrepはUnix/Linuxコマンドのgrepから着想を得ています。
+  Perl has a function called grep, which is inspired by Perl's grep from the Unix / Linux command grep.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -76,52 +73,52 @@
 </div>
 
 
-<h4>Unix/Linuxコマンドのgrep</h4>
+<h4> Unix / Linux command grep </h4>
 <p>
-  Unix/Linuxコマンドのgrepの基本的な機能は、ファイルの中にある文字列を検索して、該当する行があれば、それを取り出して表示するというものです。
+  The basic function of grep in Unix / Linux commands is to search for a string in a file and retrieve and display the corresponding line, if any.
 </p>
 <pre>
-grep ケーキ food.txt
+grep cake food.txt
 </pre>
 <p>
-  footd.txtの中に、ケーキが含まれる行があれば、それが、表示されます。
+  If there is a line in footd.txt that contains the cake, it will be displayed.
 </p>
-<h4>Perlのgrep関数</h4>
+<h4> Perl's grep function </h4>
 <p>
-  Perlのgrep関数は、Unix/Linuxコマンドのgrepから着想を得ています。
-</p>
-<p>
-  Perlのgrep関数の機能は、配列の要素で、条件に該当する要素があれば、それだけ取り出すというものです。
+  Perl's grep function is inspired by the Unix / Linux command grep.
 </p>
 <p>
-  grepコマンドの対象が、ファイルの各行であるのに対して、Perlのgrep関数は、配列の各要素となっています。
+  The function of Perl's grep function is to retrieve all the elements of an array that meet the conditions.
 </p>
 <p>
-  grep関数のサンプルを書いてみます。偶数だけを取り出すサンプルです。
+  Whereas the grep command targets each line in the file, Perl's grep function is an element of the array.
+</p>
+<p>
+  Let's write a sample of the grep function. This is a sample to extract only even numbers.
 </p>
 <pre>
-# grep関数で偶数のみ取り出す
+# Extract only even numbers with grep function
 my @nums = (1, 2, 3, 4);
-my @even_nums = grep { $_ % 2 == 0 } @nums;
+my @even_nums = grep {$_%2 == 0} @nums;
 </pre>
 <p>
-  配列の各要素は、デフォルト変数「$_」に入ってきます。そして、偶数という条件にマッチしたものだけが、取り出された新しい配列が返されます。
+  Each element of the array comes in the default variable "$_". And only those that match the even condition will return the new fetched array.
 </p>
 <p>
-  Perlのgrep関数は、Unix/Linuxのgrepコマンドと、とても近い感覚で利用できます。
+  Perl's grep function is very similar to Unix / Linux's grep command.
 </p>
-<h3>Perlの正規表現をgrepコマンドでも使える</h3>
+<h3> Perl regular expressions can also be used with the grep command </h3>
 <p>
-  Perlの正規表現は、よくある問題を簡単に解決できる機能を実装した、実用的な正規表現です。
+  Perl regular expressions are practical regular expressions that implement features that make it easy to solve common problems.
 </p>
 <p>
-  実験的ではありますが、最近のLinuxでは「-P」オプションを使うと、Perlの正規表現をgrepコマンドでも使うことができます。
+  Although experimental, in modern Linux you can also use Perl regular expressions with the grep command using the "-P" option.
 </p>
 <pre>
-grep -P '(\.txt|\.html)$' food.txt
+grep -P'(\ .txt | \ .html) $'food.txt
 </pre>
 <p>
-  Perlで活用され、広く利用されるようになった、Perlの正規表現をgrepコマンド側でも使うことができます。
+  Perl's regular expressions, which have become popular and widely used in Perl, can also be used on the grep command side.
 </p>
 
   </div>
@@ -149,8 +146,7 @@ grep -P '(\.txt|\.html)$' food.txt
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

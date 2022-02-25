@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -26,8 +25,7 @@
 </script>
 
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YB6G48MD78"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-YB6G48MD78"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,8 +33,8 @@
 
   gtag('config', 'G-YB6G48MD78');
 </script>
-<title>Perlはどんな風に書いても動きますか? - Perl Philosophy - Resolve the Mis-Understanding of Perl</title>
-<meta name="description" content="Perlはどんな風に書いても動きますかという質問に答えましょう。">
+<title> How does Perl work?  - Perl Philosophy - Resolve the Mis-Understanding of Perl</title>
+<meta name="description" content="Answer the question, how does Perl work?">
   </head>
   <body>
     <div class="container">
@@ -53,12 +51,11 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <h2><a href="/blog/20200120094159.html">Perlはどんな風に書いても動きますか?</a></h2>
+    <h2><a href="/blog/20200120094159.html"> How does Perl work? </a></H2>
 <p>
-  Perlはどんな風に書いても動きますかという質問に答えましょう。
+  Answer the question, how does Perl work?
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -76,53 +73,53 @@
 </div>
 
 
-<h3>Perlは構文木にコンパイルされる言語</h3>
+<h3> Perl is a language compiled into a syntax tree </h3>
 <p>
-  Perlのソースコードは、構文木にコンパイルされます。1行実行のインタープリタではないです。
+  Perl source code is compiled into a syntax tree. It's not a one-line execution interpreter.
 </p>
 <p>
-  Perlとしての文法が間違っていれば、実行前に、コンパイルエラーとなります。
+  If the syntax as Perl is wrong, you will get a compile error before execution.
 </p>
 <p>
-  実際にPerlの「-c」オプションを使うと、コンパイルまでの段階だけを実行できることが確認できます。
+  In fact, if you use Perl's "-c" option, you can see that you can only perform the steps up to compilation.
 </p>
 <pre>
 perl -c script.pl
 </pre>
 <p>
-  ですので、どんな風に書いても動きますかという質問の答えは、ノーです。
+  So the answer to the question of how it works no matter how you write it is no.
 </p>
-<h3>どんな風に書いても動くというのは、Perlは、文法エラーを見逃しやすいという意味です</h3>
+<h3> The fact that it works no matter how you write it means that Perl makes it easy to miss syntax errors. </H3>
 <p>
-  どんな風に書いても動くというのは、Perlは、文法エラーを見逃しやすいという意味です。
-</p>
-<p>
-  もし質問がこのような意味であれば、イエスでも、ノーでもあります。
+  The fact that it works no matter how you write it means that Perl makes it easy to miss syntax errors.
 </p>
 <p>
-  ノーと答えられる場合は、以下の二行が、ソースコードの先頭に書かれている場合です。
+  If the question means this, it is yes or no.
+</p>
+<p>
+  If you can answer no, the following two lines are at the beginning of the source code.
 </p>
 <pre>
 use strict;
 use warnings;
 </pre>
 <p>
-  Perlの良い慣習として、ソースコードを書く場合は(ワンライナーを書く場合を除いて)この二行を書きます。
+  It's a good Perl practice to write these two lines when writing source code (unless you're writing a one-liner).
 </p>
 <p>
-  strictは、文法を厳格にし、warningsは、見逃しやすい警告を表示してくれます。
+  strict tightens the grammar, and warnings display warnings that are easy to miss.
 </p>
 <p>
-  Perlのコアチームは、Perlのバージョンが5に上がる前の段階で、Perlでは、ユーザーがミスをたくさんしてしまうという問題に気が付いていました。
+  Before the Perl version went up to 5, Perl's core team was aware of the problem that users make a lot of mistakes in Perl.
 </p>
 <p>
-  そのために、Perl 5には、strictとwarningsという仕組みが導入されました。
+  That's why Perl 5 introduced a mechanism called strict and warnings.
 </p>
 <p>
-  これは、実際に成功しており、変数宣言の忘れや、未定義値を、使うべきではない場所で使ってしまうという間違いを、簡単に見つけられます。
+  It's actually successful, and it's easy to spot the mistake of forgetting to declare a variable or using an undefined value where it shouldn't.
 </p>
 <p>
-  Perl 4のころのPerlは、文法エラーを見逃しやすいというのは本当ですが、Perl 5で、strictとwarningsが有効にすれば、文法エラーを簡単に発見できます。
+  It's true that Perl around Perl 4 makes it easy to miss syntax errors, but in Perl 5, if you enable strict and warnings, you can easily spot syntax errors.
 </p>
 
   </div>
@@ -150,8 +147,7 @@ use warnings;
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

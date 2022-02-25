@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -26,8 +25,7 @@
 </script>
 
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YB6G48MD78"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-YB6G48MD78"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,8 +33,8 @@
 
   gtag('config', 'G-YB6G48MD78');
 </script>
-<title>Perlの変数展開はシェルスクリプトの変数展開と同じ - Perl Philosophy - Resolve the Mis-Understanding of Perl</title>
-<meta name="description" content="Perlには変数展開と呼ばれる機能がありますが、これはシェルスクリプトの変数展開と同じ機能です。シェルスクリプトといのは、shを初めとしてbash、csh、ksh、zshなど、shから発展したものを含み、Unix/LinuxのCUI環境でコマンドを記述するための言語のことです。">
+<title> Perl's variable expansion is the same as shell script's variable expansion  - Perl Philosophy - Resolve the Mis-Understanding of Perl</title>
+<meta name="description" content="Perl has a feature called variable expansion, which is the same as variable expansion in shell scripts. A shell script is a language for writing commands in the Unix / Linux CUI environment, including sh, bash, csh, ksh, zsh, and other advanced versions of sh.">
   </head>
   <body>
     <div class="container">
@@ -53,12 +51,11 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <h2><a href="/blog/20191004074909.html">Perlの変数展開はシェルスクリプトの変数展開と同じ</a></h2>
+    <h2><a href="/blog/20191004074909.html"> Perl's variable expansion is the same as shell script's variable expansion </a></h2>
 <p>
-  Perlには変数展開と呼ばれる機能がありますが、これはシェルスクリプトの変数展開と同じ機能です。シェルスクリプトといのは、shを初めとしてbash、csh、ksh、zshなど、shから発展したものを含み、Unix/LinuxのCUI環境でコマンドを記述するための言語のことです。
+  Perl has a feature called variable expansion, which is the same as variable expansion in shell scripts. A shell script is a language for writing commands in the Unix / Linux CUI environment, including sh, bash, csh, ksh, zsh, and other advanced versions of sh.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -76,47 +73,47 @@
 </div>
 
 
-<h4>Perlの変数展開</h4>
+<h4> Perl variable expansion </h4>
 <p>
-  Perlの変数展開です。
+  Perl variable expansion.
 </p>
 <pre>
 my $food = "apple";
 my $message = "I like $foo";
 </pre>
-<h4>シェルスクリプトの変数展開</h4>
+<h4> Shell script variable expansion </h4>
 <p>
-  シェルスクリプトの変数展開です。シェルの慣習に従って変数名は、大文字にしてあります。
+  Variable expansion of shell script. Variable names are capitalized according to shell convention.
 </p>
 <pre>
-FOOD=apple
-MESSAGE="I like $FOOD"
+FOOD = apple
+MESSAGE = "I like $FOOD"
 </pre>
-<h4>Perlの変数展開とシェルスクリプトの変数展開の比較</h4>
+<h4> Comparison of Perl variable expansion and shell script variable expansion </h4>
 <p>
-  「$」を使って、変数展開しているという部分がシェルスクリプトと同じですね。また、ダブルクォートで囲むことによって、変数展開しているところも同じです。
+  The part that expands variables using "$" is the same as the shell script. Also, the variable expansion is the same by enclosing it in double quotes.
 </p>
 <p>
-  Unix/Linux環境におけるシェルスクリプトの変数展開の文法を、Perlはそのまま提供しています。
+  Perl provides the syntax for variable expansion of shell scripts in the Unix / Linux environment.
 </p>
 <p>
-  Perlの場合は、変数自体が「$」を持つというところが、シェルスクリプトと少し異なるところです。
+  In Perl, the variable itself has a "$", which is a bit different from a shell script.
 </p>
-<h3>Perlはシェルの機能を参考にしている</h3>
+<h3> Perl refers to the functionality of the shell </h3>
 <p>
-  Perlは、もともとは、Unix環境で、テキスト処理を簡単に書けるように生まれた言語です。Perlは、Unix環境で、シェルを書いていたユーザーが、使いやすい用に配慮されています。
-</p>
-<p>
-  シェルの環境で使っていた変数展開の機能がPerlで、同じ文法で使えるのは、そのためです。シェルスクリプトで覚えた変数展開の知識を、Perlでそのまま活用することができます。
+  Perl was originally a language that was born in the Unix environment to make it easy to write text processing. Perl is designed to be easy to use for users who wrote shells in the Unix environment.
 </p>
 <p>
-  もしあなたが学生であれば、大学1年生のUnix/Linuxサーバーを学ぶ授業で、シェルについて学ぶと思います。そこで覚えた知識に少し足せば、Perlの文法を簡単に覚えることができるので、Perlの学習コストは低くなっています。
+  That's why the variable expansion function used in the shell environment is Perl, and it can be used with the same syntax. You can use the knowledge of variable expansion learned in shell scripts as it is in Perl.
 </p>
 <p>
-  シェルスクリプトの文法を過剰に批判するという人も中にはいますが、Perlは、シェルスクリプトとの親和性・協調性に焦点を合わせています。
+  If you're a student, you'll probably learn about the shell in a freshman Unix / Linux server class. The cost of learning Perl is low because you can easily learn Perl's grammar by adding a little to the knowledge you learned there.
 </p>
 <p>
-  単純にいくつかのコマンドを実行したい場合は、シェルスクリプトが簡単です。複数行のテキスト処理をしたい場合は、Perlが簡単です。
+  While some people over-criticize the grammar of shell scripts, Perl focuses on compatibility and coordination with shell scripts.
+</p>
+<p>
+  If you simply want to execute a few commands, a shell script is simple. If you want to do multi-line text processing, Perl is easy.
 </p>
 
   </div>
@@ -144,8 +141,7 @@ MESSAGE="I like $FOOD"
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

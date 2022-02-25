@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -26,8 +25,7 @@
 </script>
 
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YB6G48MD78"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-YB6G48MD78"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,8 +33,8 @@
 
   gtag('config', 'G-YB6G48MD78');
 </script>
-<title>昔CGIで掲示板を作った方へ。CGIに代わるPerl現代的Web開発手法のまとめ - Perl Philosophy - Resolve the Mis-Understanding of Perl</title>
-<meta name="description" content="Twitterのタイムライン眺めていると、昔Perl/CGIで掲示板を作ったなぁ、改造したなぁという方が結構な数でいらっしゃいます。">
+<title> Get a domain  - Perl Philosophy - Resolve the Mis-Understanding of Perl</title>
+<meta name="description" content="BIx::Handler is a module that only manages connections. Other than that, it also wraps the connection management module and provides O / R mapper functionality. From low-abstraction ones that can be used like SQL to high-abstraction ones that use database access as a method.">
   </head>
   <body>
     <div class="container">
@@ -53,12 +51,10 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <h2><a href="/blog/20191023071239.html">昔CGIで掲示板を作った方へ。CGIに代わるPerl現代的Web開発手法のまとめ</a></h2>
-<p>
-  Twitterのタイムライン眺めていると、昔Perl/CGIで掲示板を作ったなぁ、改造したなぁという方が結構な数でいらっしゃいます。
+    <p>
+  BIx::Handler is a module that only manages connections. Other than that, it also wraps the connection management module and provides O / R mapper functionality. From low-abstraction ones that can be used like SQL to high-abstraction ones that use database access as a method.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -76,287 +72,43 @@
 </div>
 
 
+<h3><a href="/blog/20191023071239.html"> Get a domain </a></h3>
 <p>
-  ところで、今のPerlのWeb開発って、どうなっているのという方のために、キーワードを検索すれば調べられるように案内を作成します。
+  In the case of CGI, I got one URL by default, but in modern web development, I need to get a domain to publish a website.
 </p>
 <p>
-  CGIで作成されているWebアプリケーションを、開発効率とパフォーマンスが高い現代的Web開発手法に変更するために、どのような知識が必要なのかということがわかるようにします。
-</p>
-<h3>Unix/Linux環境</h3>
-<p>
-  CGIといれば共有レンタルサーバーを借りますが、開発効率とパフォーマンスが高い現代的Web開発手法は、自分専用のUnix/Linuxサーバー上に構築します。
-</p>
-<p>
-  Linuxは無料で利用できるので、始めやすいでしょう。無料で利用できる代表的なLinuxについて、五十音順で紹介します。
+  Let's acquire a domain with the domain acquisition service.
 </p>
 <ul>
-  <li>CentOS</li>
-  <li>Debian</li>
-  <li>Fedora</li>
-  <li>RedHat</li>
-  <li>Ubuntu</li>
+  <li> Name.com </li>
+  <li> Muumuu domain </li>
 </ul>
 <p>
-  これらの環境は、VPSサービスやクラウドサービスを契約することによって利用することができます。
+  The domain setting must be described in the configuration file of the Web server such as Apache or Nginx after describing the correspondence between the domain and the IP address in the domain service. For Apache, search on the virtual host.
+</p>
+<h3> I want to use SSL </h3>
+<p>
+  You can issue an SSL certificate for free using a service called Let's Encrypt.
 </p>
 <ul>
-  <li>AWL</li>
-  <li>Microsoft Azure</li>
-  <li>さくらのクラウド</li>
-  <li>さくらのVPS</li>
+  <li> Let's Encrypt </li>
 </ul>
+<h3> Text editor </h3>
 <p>
-  さくらのVPSは、月額698円から始めることができます。
+  Text editor is your choice. You can use it as it is, if you have an attachment.
+</p>
+<h3> Summary </h3>
+<p>
+  Perl's web development techniques are very versatile once you remember them. Web technology is not difficult one by one, but I think it is a field that has many components and requires continuous learning.
 </p>
 <p>
-  また、現在は、WindowsでLinux環境を疑似体験できる方法があります。つまり、Windowsしか持っていなくっても、ローカル環境で、PerlのWeb開発の環境構築ができるのです。方法を五十音順で紹介します。
-</p>
-<ul>
-  <li><a href="https://perlzemi.com/blog/20180806153350.html">msys2</a></li>
-  <li>Cygwin</li>
-  <li>Windows Subsystem for Linux</li>
-</ul>
-<p>
-  msys2は、環境構築の手順が少なく簡単で、動作が軽いので、お勧めしています。Windowsしか持っていない、Linuxを体験してみたいという方は、msys2で入門してみましょう。
-</p>
-<h3>リモート環境への接続とファイル更新</h3>
-<p>
-  本番環境や開発環境がリモートにある場合は、いったいどうやって接続して、ファイルを更新するのでしょうか?
+  If you want to know the modern web development method next to CGI, please refer to it.
 </p>
 <p>
-  Windowsでは、そのためのツールがあります。以下のSSH接続できるツールを使うと、リモートサーバでコマンドを送信することができます。
-</p>
-<ul>
-  <li>Putty</li>
-  <li>TeraTerm</li>
-</ul>
-<p>
-  Mac OSの場合は、sshコマンドなどが使えるでしょう。
+  If you are a development manager who is currently running CGI and wants to move to a modern Perl web development method, please take a look.
 </p>
 <p>
-  リモードサーバーでの、ファイルの更新はどうするのでしょうか?
-</p>
-<p>
-  以下のツールが使えます。
-</p>
-<ul>
-  <li>WinSCP</li>
-</ul>
-<p>
-  Mac OSの場合は、sshで接続語、vimエディタを使えるでしょう。
-</p>
-<h3>Perlのインストール</h3>
-<p>
-  CGIの場合は、デフォルトでインストールされているPerlを使いましたが、現代的Web開発手法では、Perlを自分でインストールします。
-</p>
-<p>
-  Linux環境に、その環境ローカルで使えるPerlをインストールします。
-</p>
-<p>
-  このためのツールを五十音順で紹介します。
-</p>
-<ul>
-  <li><a href="https://perlzemi.com/blog/20110220130464.html">perlbrew</a></li>
-  <li><a href="https://perlzemi.com/blog/20180816153437.html">plenv</a></li>
-</ul>
-<h3>CPANモジュールインストール</h3>
-<p>
-  CGIでは、デフォルトでレンタルサーバーにインストールされているPerlモジュールを使うことが主流でした。
-</p>
-<p>
-  開発環境や本番環境へのCPANモジュールのインストールは、必要なモジュールをcpanfileに定義して、cpanmというコマンドを使うと、自動的に配置できます。
-</p>
-<ul>
-  <li>cpanm</li>
-  <li>cpanfile</li>
-</ul>
-<p>
-  perlbrewやplenvのオプションとしてcpanmをインストールするコマンドが存在するので、それを利用するのが簡単です。
-</p>
-<h3>PerlのWebフレームワーク</h3>
-<p>
-  CGIでは、cgi-lib.pl、CGI.pmなどを使って、掲示板を作ったり、Web開発を行っていたと思います。CGI自体は、ひとつの動的なWebを実現する技術ですが、パフォーマンスと開発効率の面で、課題を抱えていました。
-</p>
-<p>
-  現代的なPerlのWebフレームワークは、パフォーマンスと開発効率を改善しています。
-</p>
-<p>
-  PerlのWebフレームワークを五十音順で紹介します。
-</p>
-<ul>
-  <li>
-    Amon2
-  </li>
-  <li>
-    Catalyst
-  </li>
-  <li>
-    Dancer2
-  </li>
-  <li>
-    Mojolicious
-  </li>
-  <li>
-    Plack/PSGI(Webミドルウェア)
-  </li>
-</ul>
-<p>
-  Amon2, Catalyst, Dancer2, Mojoliciousは、PerlのWebフレームワークです。
-</p>
-<p>
-  Plack/PSGIは、Webミドルウェアで、WebサーバーとWebアプリケーションがコミュニケーションをするための共通仕様を提供します。
-</p>
-<p>
-  詳細は、記述しませんが、検索すれば、たくさんの情報を得ることができると思います。
-</p>
-<p>
-  CGIの課題を解決するためにPHPが利用されることは多いですが、Perl自体もCGIの課題を解決するために独自の手法を発展させてきました。
-</p>
-<h3>PerlのWebサーバー(アプリケーションサーバー)</h3>
-<p>
-  PerlのWebサーバーとは、Perl製のHTTPサーバーで、一般的には、ApacheやNginxの後ろにリバースプロキシ構成で配置して利用するものです。
-</p>
-<ul>
-  <li>Mojolicious::Server::Hypnotoad</li>
-  <li>Starman</li>
-  <li>Starlet</li>
-  <li>Server::Starter</li>
-</ul>
-<p>
-  Starman,Starlet,Mojolicious::Server::Hypnotoadは、PerlのWebサーバーです。Server::Starterは、StarmanやStarletをホットデプロイメントするために利用されます。Mojolicious::Server::Hypnotoadには、ホットデプロイメント機能が付いています。
-</p>
-<h3>文字コードはUTF-8</h3>
-<p>
-  CGIのWebアプリは、文字コードがShift_JISやeuc-jpで合ったりしました。使用されるモジュールも、jcode.pl、JCode.pmが使われていました。現代的PerlWeb開発では、文字コードはUTF-8を使用し、文字コードに関するモジュールは、Encodeモジュールとutf8モジュールを使用します。
-</p>
-<ul>
-  <li><a href="https://perlzemi.com/blog/20091118124667.html">Encodeモジュールとutf8モジュール</a></li>
-</ul>
-<p>
-  もし過去にCGIで作ったWebアプリケーションを、現代的Perl Web開発に置き換えるときは、Encodeモジュールとutf8モジュールに置き換えていくようにしましょう。
-</p>
-<h3>本番環境</h3>
-<p>
-  CGIの場合は、CGIスクリプトを共有レンタルサーバーに配置していましたが、現代的Web開発手法では、クラウドサービスかVPSサービスを借りて、配置することになります。
-</p>
-<ul>
-  <li>AWS</li>
-  <li>Microsoft Azure</li>
-  <li>さくらのクラウド</li>
-  <li>さくらのVPS</li>
-</ul>
-<p>
-  さくらのVPSは、月額698円で、本物のLinux環境を利用できます。個人で始める方は、こちらが、低額で、お安くて便利です。
-</p>
-<p>
-  企業が、本番環境に配置する場合は、半固定料金か、従量制課金のクラウドを使うことが多いかと思います。
-</p>
-<p>
-  CGIの時代は、FTPでファイルをアップロードしていましたが、現代的Web開発手法では、Githubというサービスとgitというツールを使うのが簡単です。昔は手動でFTPでファイルを上げていましたが、gitを使うと、すべてのファイルをひとつのコマンドで、配置することができます。
-</p>
-<ul>
-  <li>Github</li>
-  <li>git</li>
-</ul>
-<h3>Webサーバー</h3>
-<p>
-  CGIでは、ファイルを配置するだけで完了しましたが、現代的Web開発手法では、Webサーバーを使って、リバースプロキシの設定をして、アプリケーションサーバーに接続します。
-</p>
-<p>
-  よく利用されるWebサーバーは、ApacheかNginxです。
-</p>
-<p>
-  Webサーバーのインストールは、「Linux名 Webサーバー名 インストール」で検索しましょう。
-</p>
-<ul>
-  <li>
-    Apache
-  </li>
-  <li>
-    Nginx
-  </li>
-</ul>
-<p>
-  リバースプロキシという機能を使って、WebサーバーとWebアプリを接続する方法については、「Apache リバースプロキシ」「Nginx リバースプロキシ」で、検索してみましょう。
-</p>
-<h3>データベース</h3>
-<p>
-  CGIの場合は、データをファイルに保存することが多かったのですが、現代的Web開発手法では、データをデータベースに保存します。
-</p>
-<p>
-  Webアプリでよく使われるデータベースです。
-</p>
-<ul>
-  <li>MySQL</li>
-  <li>MariaDB</li>
-  <li>PostgreSQL</li>
-</ul>
-<p>
-  インストールは、「Linux名 データベース名 インストール」で検索しましょう。
-</p>
-<p>
-  MySQLとMariaDBは、まぁ同じようなものです。Perlからデータベース接続する場合はDBIとDBD::mysqlが必要です。
-</p>
-<p>
-  PostgreSQLに接続するためにはDBIとDBD::Pgが必要です。
-</p>
-<h3>データベースへの接続管理とO/Rマッパー</h3>
-<p>
-  CGIの時代は、レンタルサーバーにインストールされているDBIを使って、データベースに接続していましたが、現代的Web開発手法では、データベースのテーブルにアクセスする便利なモジュールを、インストールします。
-</p>
-<p>
-  データベースへの接続は、接続管理維持や、joinを簡単に使いたいなどの要望がでてきますね。そういう場合のために、いくつかのO/Rマッパーを紹介しておきましょう。五十音順です。
-</p>
-<ul>
-  <li>Aniki</li>
-  <li>DBIx::Class</li>
-  <li>DBIx::Connector</li>
-  <li>DBIx::Custom</li>
-  <li>DBIx::Handler</li>
-  <li>DBIx::Simple</li>
-  <li>SQL::Maker</li>
-  <li>Teng</li>
-</ul>
-<p>
-  DBIx::ConnectorとDBIx::Handlerは接続管理だけをやってくれるモジュールです。それ以外は、さらに、接続管理モジュールをラッピングしていて、O/Rマッパー機能を提供します。SQLのように使える抽象度の低いものから、データベースアクセスをメソッドにして抽象度の高いものまでがそろっています。
-</p>
-<h3>ドメインの取得</h3>
-<p>
-  CGIの場合は、デフォルトでひとつのURLをもらえていましたが、現代的Web開発で、Webサイトを公開するには、ドメインを取得する必要があります。
-</p>
-<p>
-  ドメイン取得サービスで、ドメインを取得しましょう。
-</p>
-<ul>
-  <li>お名前.com</li>
-  <li>ムームードメイン</li>
-</ul>
-<p>
-  ドメインの設定は、ドメインサービスで、ドメインとIPアドレスの対応を記述した上で、ApacheやNginxなどのWebサーバーの設定ファイルに記述する必要があります。Apacheの場合は、バーチャルホストで検索してください。
-</p>
-<h3>SSLを使いたい</h3>
-<p>
-  Let's Encryptというサービスを使うと、無料でSSL証明書を発行することができます。
-</p>
-<ul>
-  <li>Let's Encrypt</li>
-</ul>
-<h3>テキストエディタ</h3>
-<p>
-  テキストエディタは、お好みで。愛着のあるもの、そのままお使いいただけます。
-</p>
-<h3>まとめ</h3>
-<p>
-  PerlのWeb開発の手法は、一度覚えてしまえば、非常に応用が利く技術です。Web技術は、ひとつひとつの難易度は高くないのですが、構成要素が、多く継続的な学習がまさに必要になる分野だと思います。
-</p>
-<p>
-  CGIの次に、現代的なWeb開発の手法を知りたいという方は、ぜひ参考にしてみてください。
-</p>
-<p>
-  今システムがCGIで動いていて、現代的なPerlのWeb開発手法に移行したいという開発マネージャーの方もぜひ参考にしてください。
-</p>
-<p>
-  CGIの課題解決としてPHPが開発されましたが、Perl自体もCGIの課題解決のために独自の発展を遂げています。
+  PHP was developed to solve CGI problems, but Perl itself has made its own developments to solve CGI problems.
 </p>
 
   </div>
@@ -384,8 +136,7 @@
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

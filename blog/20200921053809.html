@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -26,8 +25,7 @@
 </script>
 
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YB6G48MD78"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-YB6G48MD78"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,8 +33,8 @@
 
   gtag('config', 'G-YB6G48MD78');
 </script>
-<title>Perlの多様性と規律という考え方はなぜ人の心に優しいのか - Perl Philosophy - Resolve the Mis-Understanding of Perl</title>
-<meta name="description" content="Perlは多様性と規律という考え方があります。なぜこの考え方は人の心に優しいのでしょうか?">
+<title> Why is Perl's idea of ​​diversity and discipline kind to people?  - Perl Philosophy - Resolve the Mis-Understanding of Perl</title>
+<meta name="description" content="Perl has the idea of ​​diversity and discipline. Why is this idea kind to people's hearts?">
   </head>
   <body>
     <div class="container">
@@ -53,12 +51,11 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <h2><a href="/blog/20200921053809.html">Perlの多様性と規律という考え方はなぜ人の心に優しいのか</a></h2>
+    <h2><a href="/blog/20200921053809.html"> Why is Perl's idea of ​​diversity and discipline kind to people? </a></H2>
 <p>
-  Perlは多様性と規律という考え方があります。なぜこの考え方は人の心に優しいのでしょうか?
+  Perl has the idea of ​​diversity and discipline. Why is this idea kind to people's hearts?
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -76,122 +73,122 @@
 </div>
 
 
-<h3>Perlの多様性の意味</h3>
+<h3> The meaning of Perl's diversity </h3>
 <p>
-  Perlの多様性の意味について、いくつか例を書きます。
+  Here are some examples of what Perl's diversity means.
 </p>
-<h4>人間の多様性に配慮する</h4>
+<h4> Consider human diversity </h4>
 <p>
-  Perlのプログラミングの前提は、人には多様性があるということです。人が書いた文章は、コンピュータが生成したもののように、画一的ではありません。それぞの人に、癖があり、その癖は多様なので、Perlプログラムの方が、それを配慮します。
-</p>
-<p>
-  たとえば、数字の1を書く場合、半角の「1」を書く人と、全角の「１」を書く人がいたとしましょう。
+  The premise of Perl programming is that people are diverse. Human-written texts are not as uniform as computer-generated ones. Each person has a habit, and that habit is diverse, so the Perl program takes that into account.
 </p>
 <p>
-  これは、人の癖を考えた場合に、頻繁に起こることですが、コンピュータは画一的に扱いたいと思います。
+  For example, when writing the number 1, let's say that there are people who write half-width "1" and people who write full-width "1".
 </p>
 <p>
-  Perlは、人間の側を配慮して、このような書き方に対して、すぐに対処して、コンピュータで扱いやすい形に変換できます。
+  This happens frequently when considering human habits, but I would like to treat computers uniformly.
+</p>
+<p>
+  Perl is human-friendly and can quickly address these writings and convert them into computer-friendly forms.
 </p>
 <pre>
-# 全角の１を半角の1に変換する
-$str =~ s/１/1/;
+# Convert full-width 1 to half-width 1
+$str = ~ s / 1/1 /;
 </pre>
-<h4>文法の多様性でよくあるパターンに対処する</h4>
+<h4> Deal with common patterns in grammatical diversity </h4>
 <p>
-  次は、Perlの文法の多様性でよくあるパターンに対処するという例を紹介します。
+  The following is an example of dealing with a common pattern in Perl's grammatical variety.
 </p>
 <p>
-  改行区切りのを文字列コピペで扱いたいという場合です。
+  You want to handle line breaks with string copy and paste.
 </p>
 <p>
-  システム開発を行っていると、改行区切りの文字列というのは、頻繁に登場します。一つの例としては、Excelの縦の列として、入力されている場合です。
+  When developing a system, line break delimited strings appear frequently. One example is when it is entered as a vertical column in Excel.
 </p>
 <pre>
-# 改行区切りの文字列
+# Line break delimited string
 foo
-bar
+bar bar
 baz
 </pre>
 <p>
-  実務では、これをすぐにプログラム上で、配列にしたいのです。
+  In practice, I want this to be an array programmatically right away.
 </p>
 <p>
-  Perlには、二つの方法があります。文字列リスト演算子かDATAセクションを使う方法です。
+  There are two ways in Perl. You can use the string list operator or the DATA section.
 </p>
 <pre>
-# 文字列リストで配列にする
-my $strs = qw(
+# Make an array with a string list
+my $strs = qw (
 foo
-bar
+bar bar
 baz
 );
 
-# DATAセクションを使ってファイル入出力のように扱う
+Treat like file I / O with #DATA section
 while (my $line = &lt;DATA&gt;) {
   chomp $line;
   
-  # 処理
+  # process
 }
 
 __DATA__
 foo
-bar
+bar bar
 baz
 </pre>
 <p>
-  Perlには、画一性を好んで、一つの配列の構文が用意されているというわけではなく「改行区切りのを文字列コピペで扱いたい」という要望に対して、文字列リスト演算子とDATAセクションが用意されています。
+  Perl does not have a single array syntax for uniformity, but in response to the desire to "handle line breaks with string copy and paste", the string list operator and DATA Sections are available.
 </p>
 <p>
-  これは、Perlの文法の多様性の一例ですが、この多様性には、価値や意味があります。
+  This is an example of Perl's grammatical variety, which has value and meaning.
 </p>
-<h3>開発者やチームに規律が必要</h3>
+<h3> Developers and teams need discipline </h3>
 <p>
-  Perlには、人の多様性に適応するために、文法の多様性があるので、ある程度開発者やチームに規律が必要です。
-</p>
-<p>
-  これは、コーディング規約のような固いものでなくてもよいですが、他の開発者、デザイナー、インフラエンジニアにとって、読みやすいように、配慮されている必要があります。
+  Perl has a variety of grammars to adapt to human diversity, so some discipline is needed for developers and teams.
 </p>
 <p>
-  Perlが、あなたの書きやすいように配慮してくれるように、あなたは、他の開発者、デザイナー、インフラエンジニアに配慮する必要があります。また、開発者が変わった場合の未来のエンジニアに対して、このコードは、その人にとって、管理しやすいだろうかということを、考える必要があります。
-</p>
-<h3>多様性という価値を、画一性という価値と対比する価値がある</h3>
-<p>
-  Perlには、人間を画一的に扱うという考え方が、存在していません。
+  It doesn't have to be as rigid as a coding convention, but it should be designed to be readable by other developers, designers, and infrastructure engineers.
 </p>
 <p>
-  多くの人が誤解していますが、この一つの方法を適用したり、この一つのやり方をさせれば、システム開発がうまくいくということは、まずありません。
+  You need to be considerate of other developers, designers, and infrastructure engineers so that Perl takes care of your writing. You also need to wonder if this code will be easier for future engineers to manage if the developer changes.
+</p>
+<h3> It is worth comparing the value of diversity with the value of uniformity </h3>
+<p>
+  Perl doesn't have the idea of ​​treating humans uniformly.
 </p>
 <p>
-  開発者がわがままなので、組織のプロダクトマネージャーとしては、この人を、取り換え可能な、画一的な部品のように扱って、システム開発をうまく進めたいと思うでしょう。
+  As many people misunderstand, it is unlikely that system development will be successful if this one method is applied or if this one method is used.
 </p>
 <p>
-  ただし、現実には「人間は心を持っている」という、当たり前すぎる事実を忘れています。
+  Since the developers are selfish, as an organization's product manager, you'll want to treat this person like a replaceable, uniform component and proceed with system development.
 </p>
 <p>
-  特に、プロダクトを前向きに進めてくれる、クリエイティブな開発者は、画一的に扱われると、それに抵抗したり、価値を見出せなくなったり、失望したりします。
+  However, in reality, we forget the fact that "human beings have a heart", which is too obvious.
 </p>
 <p>
-  小さな失敗が許されること、自由な選択が可能なこと、自己規律を望むからです。
+  In particular, creative developers who move products forward can resist, lose value, or be disappointed when treated uniformly.
 </p>
 <p>
-  長期的に画一的に扱われることが続くと、鬱になる可能性もあります。
+  I want to be able to make small mistakes, be free to choose, and be self-disciplined.
 </p>
 <p>
-  Perlの多様性と規律という考え方は、人の心に優しく、希望のある考え方です。
+  If you continue to be treated uniformly over the long term, you may become depressed.
 </p>
 <p>
-  「Perlはどんな風にでも書けて、だれも読めない」という批判が、画一性の側から語られていますが、多様性と規律という考え方と、一度比較してみてください。
+  Perl's idea of ​​diversity and discipline is kind and hopeful.
 </p>
 <p>
-  実際に、Perlが文化として語ってきたのは、以下の二つのメッセージです。
+  The criticism that "Perl can be written in any way and no one can read it" has been criticized from the aspect of uniformity, but please compare it with the idea of ​​diversity and discipline.
+</p>
+<p>
+  In fact, Perl has spoken as a culture in the following two messages.
 </p>
 <ul>
   <li>
-    Perlの文法は人間の多様性に適用するためにある程度多様である必要がある
+    Perl grammar needs to be somewhat diverse in order to apply to human diversity
   </li>
   <li>
-    後で読む人のことを考えて、規律を持ってコーディングする必要がある
+    You need to be disciplined in coding, thinking of the reader later
   </li>
 </ul>
 
@@ -220,8 +217,7 @@ baz
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

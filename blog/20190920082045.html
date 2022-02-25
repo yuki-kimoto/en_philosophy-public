@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -26,8 +25,7 @@
 </script>
 
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YB6G48MD78"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-YB6G48MD78"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,8 +33,8 @@
 
   gtag('config', 'G-YB6G48MD78');
 </script>
-<title>Perlのインクリメント/デクリメントの動作はC言語と同じ - Perl Philosophy - Resolve the Mis-Understanding of Perl</title>
-<meta name="description" content="C言語のインクリメント/デクリメントの動作は、C言語と同じです。Perlの文法は、C言語を多く参考にしており、インクメント/デクリメントは、C言語と同じ文法で使用することができます。">
+<title> Perl's increment / decrement behavior is the same as in C  - Perl Philosophy - Resolve the Mis-Understanding of Perl</title>
+<meta name="description" content="The behavior of increment / decrement in C is the same as in C. Perl's grammar is based heavily on C, and ink / decrement can be used with the same grammar as C.">
   </head>
   <body>
     <div class="container">
@@ -53,12 +51,11 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <h2><a href="/blog/20190920082045.html">Perlのインクリメント/デクリメントの動作はC言語と同じ</a></h2>
+    <h2><a href="/blog/20190920082045.html"> Perl's increment / decrement behavior is the same as in C </a></h2>
 <p>
-  C言語のインクリメント/デクリメントの動作は、C言語と同じです。Perlの文法は、C言語を多く参考にしており、インクメント/デクリメントは、C言語と同じ文法で使用することができます。
+  The behavior of increment / decrement in C is the same as in C. Perl's grammar is based heavily on C, and ink / decrement can be used with the same grammar as C.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -76,92 +73,92 @@
 </div>
 
 
-<h3>PerlのインクリメントとC言語のインクリメントの比較</h3>
-<h4>Perlのインクリメント</h4>
+<h3> Comparison of Perl increment and C language increment </h3>
+<h4> Perl increments </h4>
 <p>
-  Perlのインクリメントです。Perlのインクリメントは、変数に保存されている数値を1増やします。インクリメントが前置された場合は、評価後の値が返されます。インクリメントが後置された場合は、評価前の値が返されます。
+  Perl increment. Perl increments increment the number stored in the variable by 1. If the increment is prefixed, the evaluated value is returned. If the increment is postfixed, the value before evaluation is returned.
 </p>
 <p>
-  この動作は、C言語と全く同じです。
+  This behavior is exactly the same as in C.
 </p>
 <pre>
-# Perlのインクリメント
-$num++;
-++$num;
+# Perl increment
+$num ++;
+++ $num;
 </pre>
-<h4>C言語のインクリメント</h4>
+<h4> C language increment </h4>
 <p>
-  C言語のインクリメントです。C言語のインクリメントです。C言語のインクリメントは、変数に保存されている数値を1増やします。インクリメントが前置された場合は、評価後の値が返されます。インクリメントが後置された場合は、評価前の値が返されます。
+  C language increment. C language increment. C language increments increment the number stored in the variable by 1. If the increment is prefixed, the evaluated value is returned. If the increment is postfixed, the value before evaluation is returned.
 </p>
 <pre>
-# C言語のインクリメント
-num++;
-++num;
+#C language increment
+num ++;
+++ num;
 </pre>
-<h3>PerlのデクリメントとC言語のデクリメントの比較</h3>
-<h4>Perlデクリメント</h4>
+<h3> Comparison of Perl Decrement and C Decrement </h3>
+<h4> Perl Decrement </h4>
 <p>
-  Perlのデクリメントです。Perlのデクリメントは、変数に保存されている数値を1減らします。デクリメントが前置された場合は、評価後の値が返されます。デクリメントが後置された場合は、評価前の値が返されます。
+  Perl decrement. Perl decrement decrements the number stored in the variable by one. If decrement is prefixed, the evaluated value is returned. If the decrement is postfixed, the pre-evaluation value is returned.
 </p>
 <p>
-  この動作は、C言語と全く同じです。
+  This behavior is exactly the same as in C.
 </p>
 <pre>
-# Perlのデクリメント
+# Perl decrement
 $num--;
 --$num;
 </pre>
-<h4>C言語のデクリメント</h4>
+<h4> C language decrement </h4>
 <p>
-  C言語のデクリメントです。C言語のデクリメントです。C言語のデクリメントは、変数に保存されている数値を1減らします。デクリメントが前置された場合は、評価後の値が返されます。デクリメントが後置された場合は、評価前の値が返されます。
+  C language decrement. C language decrement. C language decrement decrements the number stored in the variable by one. If decrement is prefixed, the evaluated value is returned. If the decrement is postfixed, the pre-evaluation value is returned.
 </p>
 <pre>
-# C言語のデクリメント
+#C language decrement
 num--;
 --num;
 </pre>
-<h3>C言語で覚えたインクリメント/デクリメントの文法をPerlでそのまま使える</h3>
+<h3> You can use the increment / decrement grammar you learned in C as it is in Perl </h3>
 <p>
-  C言語で覚えたインクリメント/デクリメントの文法をPerlでそのまま使えます。
+  You can use the increment / decrement grammar you learned in C as it is in Perl.
 </p>
 <p>
-  これは、Perlが、ユーザーが慣れ親しんだC言語の文法をそのまま採用したということです。
+  This means that Perl has adopted the C grammar that users are accustomed to.
 </p>
 <p>
-  Perlは、C言語と親和性の高いプログラミング言語です。
+  Perl is a programming language that has a high affinity with the C language.
 </p>
-<h3>インクリメント/デクリメントに関するC言語への批判はささいなものだと思う</h3>
+<h3> I think the criticism of C language regarding increment / decrement is trivial </h3>
 <p>
-  ある人たちは、C言語の、インクリメント/デクリメントの仕様を、非常に批判的に語ります。
+  Some people speak very critically about the C language's increment / decrement specification.
 </p>
 <ul>
-  <li>前置と後置で意味が変わるので、理解しづらく、バグを生みやすい</li>
-  <li>後置のインクリメントは、構文解析が複雑</li>
-  <li>値がイミュータブルではなくなる</li>
+  <li> Because the meaning changes between the prefix and the suffix, it is difficult to understand and it is easy to create bugs </li>
+  <li> Postfix increments are complicated to parse </li>
+  <li> The value is no longer immutable </li>
 </ul>
 <p>
-  でも、これって、ささいなことだと思いませんか。重箱の隅をつつくような議論に感じませんか。
+  But don't you think this is a trivial matter? Don't you feel the discussion like poking the corner of a heavy box?
 </p>
 <p>
-  なにかこう、自分のことは棚に上げて、人の小さな悪いところを、過大に批判するみたいな。
+  Somehow, it's like putting yourself on the shelf and over-criticizing a person's little bad things.
 </p>
 <p>
-  こういう議論に巻き込まれたら、素早くその場所を去った方がよいかもしれませんね。
+  If you get caught up in this kind of discussion, you might want to leave the place quickly.
 </p>
 <p>
-  <b>それよりもむしろ、広く利用されているC言語の文法を、そのまま採用したPerlを再評価してみるのはいかがでしょう。</b>
+  <b> Rather, why not re-evaluate Perl, which uses the widely used C grammar as it is. </b>
 </p>
-<h3>PerlとC言語の他の類似点</h3>
+<h3> Other similarities between Perl and C </h3>
 <p>
-  この記事では、Perlのインクリメント/デクリメントがC言語と似ているということを書きましたが、Perlのfor文,if文、while文、演算子の種類と優先順位、スコープ、参照概念も、C言語と似ています。
+  In this article, I wrote that Perl's increment / decrement is similar to C, but Perl's for statements, if statements, while statements, operator types and priorities, scopes, and reference concepts are also C. Similar to language.
 </p>
 <ul>
-  <li><a href="/blog/20190926072429.html">Perlのif文はC言語のif文に似ている</a></li>
-  <li><a href="/blog/20190925080555.html">Perlのfor文は、C言語のfor文と、同一の文法</a></li>
-  <li><a href="/blog/20191001073128.html">Perlのwhile文は、C言語のwhile文と、同一の文法</a></li>
-  <li><a href="/blog/20191001075312.html">Perlの演算子とC言語の演算子は、種類が似ていて、優先順位が同じ</a></li>
-  <li><a href="/blog/20191002073518.html">Perlは単独のスコープがC言語と同じように使える</a></li>
-  <li><a href="/blog/20191002075550.html">Perlのリファレンスの機能は、C言語のポインタの機能と同じ</a></li>
+  <li> <a href="/blog/20190926072429.html"> Perl if statements are similar to C if statements</a> </li>
+  <li> <a href="/blog/20190925080555.html"> Perl for statement has the same grammar as C language for statement</a> </li>
+  <li> <a href="/blog/20191001073128.html"> Perl while statement has the same grammar as C language while statement</a> </li>
+  <li> <a href="/blog/20191001075312.html"> Perl operators and C operators are similar in type and have the same priority</a> </li>
+  <li> <a href="/blog/20191002073518.html"> Perl can use a single scope in the same way as C</a> </li>
+  <li> <a href="/blog/20191002075550.html"> Perl reference functionality is the same as C pointer functionality</a> </li>
 </ul>
 
   </div>
@@ -189,8 +186,7 @@ num--;
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

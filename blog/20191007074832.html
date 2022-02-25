@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -26,8 +25,7 @@
 </script>
 
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YB6G48MD78"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-YB6G48MD78"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,8 +33,8 @@
 
   gtag('config', 'G-YB6G48MD78');
 </script>
-<title>Perlの文字列比較演算子、eq,ne,gt,ge,lt,lは、シェルスクリプトの数値比較演算子が由来 - Perl Philosophy - Resolve the Mis-Understanding of Perl</title>
-<meta name="description" content="Perlには、文字列比較演算子としてeq,ne,gt,ge,lt,leというキーワードがありますが、これはシェルスクリプト(sh,bash,csh,zsh,ksh)の数値比較演算子が由来です。">
+<title> Perl's string comparison operator, eq, ne, gt, ge, lt, l, is derived from the shell script's numerical comparison operator  - Perl Philosophy - Resolve the Mis-Understanding of Perl</title>
+<meta name="description" content="Perl has the keywords eq, ne, gt, ge, lt, le as string comparison operators, which are derived from the numerical comparison operators in shell scripts (sh, bash, csh, zsh, ksh). ..">
   </head>
   <body>
     <div class="container">
@@ -53,12 +51,11 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <h2><a href="/blog/20191007074832.html">Perlの文字列比較演算子、eq,ne,gt,ge,lt,lは、シェルスクリプトの数値比較演算子が由来</a></h3>
+    <h2><a href="/blog/20191007074832.html"> Perl's string comparison operator, eq, ne, gt, ge, lt, l, is derived from the shell script's numerical comparison operator </a></h3>
 <p>
-  Perlには、文字列比較演算子としてeq,ne,gt,ge,lt,leというキーワードがありますが、これはシェルスクリプト(sh,bash,csh,zsh,ksh)の数値比較演算子が由来です。
+  Perl has the keywords eq, ne, gt, ge, lt, le as string comparison operators, which are derived from the numerical comparison operators in shell scripts (sh, bash, csh, zsh, ksh). ..
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -76,12 +73,12 @@
 </div>
 
 
-<h3>Perlの文字列比較演算子</h3>
+<h3> Perl string comparison operator </h3>
 <p>
-  Perlの文字列比較演算子です。文字列を辞書順で比較します。
+  Perl string comparison operator. Compare strings in lexicographical order.
 </p>
 <pre>
-# Perlの文字列比較演算子
+# Perl string comparison operator
 $str1 eq $str2
 $str1 ne $str2
 $str1 gt $str2
@@ -89,12 +86,12 @@ $str1 ge $str2
 $str1 lt $str2
 $str1 le $str2
 </pre>
-<h3>シェルスクリプトの数値比較演算子</h3>
+<h3> Shell script numeric comparison operator </h3>
 <p>
-  シェルスクリプトの数値比較演算子です。
+  Numeric comparison operator for shell scripts.
 </p>
 <pre>
-# シェルスクリプトの数値比較演算子
+# Shell script numeric comparison operator
 [$num1 -eq $num2]
 [$num1 -ne $num2]
 [$num1 -gt $num2]
@@ -102,18 +99,18 @@ $str1 le $str2
 [$num1 -lt $num2]
 [$num1 -le $num2]
 </pre>
-<h3>Perlとシェルスクリプトのeq,ne,gt,ge,lt,leの比較</h3>
+<h3> Comparison of Perl and shell script eq, ne, gt, ge, lt, le </h3>
 <p>
-  Perlの文字列比較演算子eq,ne,gt,ge,lt,leとシェルスクリプトのeq,ne,gt,ge,lt,leの比較してみましょう。キーワード名は、シェルスクリプトと同じものを使っているというところは同じですが、ずいぶん違います。
+  Let's compare Perl's string comparison operators eq, ne, gt, ge, lt, le with the shell script eq, ne, gt, ge, lt, le. The keyword names are the same as the shell scripts, but they are quite different.
 </p>
 <p>
-  Perlの場合は、文字列比較を行っているのに対して、シェルの場合は数値比較を行っていますね。シェルクリプトの場合は演算子の前に「-」が必要なのと、比較演算子を「[]」で囲む必要があります。Perlの場合は、必要がありません。
+  In the case of Perl, string comparison is performed, while in the case of shell, numerical comparison is performed. For shell crypto, the operator must be preceded by a "-" and the comparison operator must be enclosed in "[]". For Perl, you don't need to.
 </p>
 <p>
-  Perlの場合は<a href="/blog/20191001075312.html">数値比較演算子はC言語と同じ</a>でした。C言語は数値計算などの処理スピードが求められる分野で活躍していますが、Perlは、ここから数値比較演算子を借用しています。
+  For Perl, the <a href="/blog/20191001075312.html"> numeric comparison operator was the same as in C</a>. C language is active in fields where processing speed is required, such as numerical calculation, but Perl borrows numerical comparison operators from here.
 </p>
 <p>
-  一方、文字列比較演算子には、シェルスクリプトにおける数値比較演算子を借用しました。eq,ne,gt,ge,lt,leという演算子は記号ではなく文字なので、文字列を比較する場合に連想しやすいというのがひとつの理由としてあります。
+  On the other hand, I borrowed the numeric comparison operator in the shell script for the string comparison operator. One reason is that the operators eq, ne, gt, ge, lt, le are letters, not symbols, so they are easy to associate with when comparing strings.
 </p>
 
   </div>
@@ -141,8 +138,7 @@ $str1 le $str2
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

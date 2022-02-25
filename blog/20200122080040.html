@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -26,8 +25,7 @@
 </script>
 
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YB6G48MD78"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-YB6G48MD78"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,8 +33,8 @@
 
   gtag('config', 'G-YB6G48MD78');
 </script>
-<title>WindowsでPerlを使うべきではないというのは本当ですか? - Perl Philosophy - Resolve the Mis-Understanding of Perl</title>
-<meta name="description" content="「WindowsでPerlを使うべきではないというのは本当ですか?」">
+<title> Is it true that you shouldn't use Perl on Windows?  - Perl Philosophy - Resolve the Mis-Understanding of Perl</title>
+<meta name="description" content=""Is it true that you shouldn't use Perl on Windows?"">
   </head>
   <body>
     <div class="container">
@@ -53,12 +51,11 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <h2><a href="/blog/20200122080040.html">WindowsでPerlを使うべきではないというのは本当ですか?</a></h2>
+    <h2><a href="/blog/20200122080040.html"> Is it true that you shouldn't use Perl on Windows? </a></h2>
 <p>
-  「WindowsでPerlを使うべきではないというのは本当ですか?」
+  "Is it true that you shouldn't use Perl on Windows?"
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -77,153 +74,153 @@
 
 
 <p>
-  この質問に答えてみましょう。
+  Let's answer this question.
 </p>
-<h3>PerlはWindowsをサポートしている</h3>
+<h3> Perl supports Windows </h3>
 <p>
-  まず前提知識として、PerlコアはWindowsをサポートしています。
-</p>
-<p>
-  PerlはC言語で書かれていますが、ソースコードを見ると、Windows用のポーティングがあります。
-</p>
-<h3>Windows用のディストリビューション</h3>
-<p>
-  Perlには、Windows用のディストリビューションとして、Active Perl(アクティブパール)とStrawberry Perl(ストロベリーパール)があります。
+  First and foremost, the Perl core supports Windows.
 </p>
 <p>
-  ディストリビューションというのは、PerlをWindowsでインストールを簡単にして、使いやすくしたものだと考えてください。
+  Perl is written in C, but if you look at the source code, you'll find porting for Windows.
+</p>
+<h3> Distribution for Windows </h3>
+<p>
+  Perl has distributions for Windows, Active Perl and Strawberry Perl.
 </p>
 <p>
-  Active PerlもStrawberry Perlも、最新版のPerlがリリースすると、その少し後に、リリースされています。
-</p>
-<h3>どうしてWindowsでPerlを使うべきではないという人がいるのか</h3>
-<p>
-  Perlは、Windowsで正しく動き、ディストリビューションも最新版が存在するのに、WindowsでPerlを使うべきではないといった人がいるのはなぜなのでしょう?
+  Think of a distribution as an easy-to-install and easy-to-use version of Perl on Windows.
 </p>
 <p>
-  それは、日本語の問題です。Windowsでは、日本語が扱いにくいという批判です。
+  Both Active Perl and Strawberry Perl were released shortly after the latest version of Perl was released.
+</p>
+<h3> Why should some people not use Perl on Windows? </H3>
+<p>
+  Why does some people say that Perl works fine on Windows and the distribution is up to date, but you shouldn't use Perl on Windows?
 </p>
 <p>
-  結論を先に書くと、Perlは、Windowsで日本語を正しく扱えますし、正しい作法を覚えれば、不自由することはありません。
+  It's a Japanese problem. It is a criticism that Japanese is difficult to handle on Windows.
 </p>
 <p>
-  でも、そういう批判がでたということは、Perlの日本語処理は、確かに、歴史的に、混乱した時期があったのです。
-</p>
-<h3>Perlの日本語処理の混乱とは何か</h3>
-<p>
-  Webを検索すると、Perlには、さまざまな日本語処理のやり方がでてきます。
+  To write the conclusion first, Perl can handle Japanese correctly on Windows, and if you learn the correct manners, you will not be inconvenienced.
 </p>
 <p>
-  jcode.pl、JCode.pm、Encode、encoding、JPerl、binmode、utf8、utf8::is_uft8。
+  However, the fact that such criticisms came out means that Perl's Japanese processing certainly had a period of turmoil historically.
+</p>
+<h3> What is the confusion of Perl's Japanese processing? </H3>
+<p>
+  When you search the Web, Perl has various Japanese processing methods.
 </p>
 <p>
-  さて、私たちは、いったい何を信用すればよいのでしょうか?
+  jcode.pl, JCode.pm, Encode, encoding, JPerl, binmode, utf8, utf8::is_uft8.
 </p>
 <p>
-  どうして、これほどまでに、Webに存在する日本語処理の方法は、混在しているのでしょうか?
+  So what exactly should we trust?
 </p>
 <p>
-  ひとつの理由は、時代の推移にあります。
-</p>
-<h4>日本語を正しくサポートしていなかったPerl 4とPerl 5初期</h4>
-<p>
-  Perl 4とPerl 5の初期は、Unicodeのサポートが存在していません。
+  Why are the Japanese processing methods that exist on the Web so mixed?
 </p>
 <p>
-  ですので、この時代Windowsのcp932(Shift_JISの派生)で、Perlを使おうと思うと、日本語処理が不便でした。
+  One reason is the transition of the times.
+</p>
+<h4> Perl 4 and Perl 5 early </h4> that did not support Japanese correctly
+<p>
+  Initially in Perl 4 and Perl 5, there was no Unicode support.
 </p>
 <p>
-  ですので、Perlにcp932の文字コードをそのまま扱えるパッチをあてたJPerlというものが開発されました。
+  Therefore, when I tried to use Perl with cp932 (a derivative of Shift_JIS) of Windows at this time, Japanese processing was inconvenient.
 </p>
 <p>
-  これは、Perl本体にパッチをあてています。つまり、jperlは、Perlそのものではなくって、Perlの派生です。
+  Therefore, JPerl was developed by applying a patch to Perl that can handle the character code of cp932 as it is.
 </p>
 <p>
-  これとは別に、Perlで日本語処理を扱う方法として、Perlとjcode.plと呼ばれる文字のエンコードモジュールを使う方法も存在しました。
+  This is a patch to Perl itself. In other words, jperl is a derivative of Perl, not Perl itself.
 </p>
 <p>
-  jcode.plをモジュール化したのがJcode.pmです。
+  Apart from this, there was also a way to handle Japanese processing in Perl by using Perl and a character encoding module called jcode.pl.
 </p>
 <p>
-  Perl 5の後期で、Unicodeをサポートすることによって、Perl本体でも、日本語のようなマルチバイト文字を扱おうという流れになってきました。
+  Jcode.pm is a modularization of jcode.pl.
 </p>
 <p>
-  Perl 5.6で試験的にUnicdeがサポートされ、Perl 5.8でEncodeが導入されました。Unicode周辺のバグがなくなったのは、Perl 5.8.7です。
+  In the latter half of Perl 5, by supporting Unicode, Perl itself has become a trend to handle multi-byte characters like Japanese.
 </p>
 <p>
-  これは、2002年～2007年の間です。
-</p>
-<h4>日本語処理、大混乱の時期</h4>
-<p>
-  もちろんUnicodeがサポートされたからといって、以前の習慣があるわけですから、そんなに簡単に、新しい習慣に変えられるはずもありません。
+  Unicde was experimentally supported in Perl 5.6, and Encode was introduced in Perl 5.8. Perl 5.8.7 is free from bugs around Unicode.
 </p>
 <p>
-  実際、jcode.plやJCode.pmを使っているプログラムを、新しいUnicodeの仕組みにリファクタリングするのは、かなりの労力が必要です。
+  This is between 2002 and 2007.
+</p>
+<h4> Japanese processing, time of turmoil </h4>
+<p>
+  Of course, just because Unicode is supported doesn't mean you can easily change to a new habit because you have the old habit.
 </p>
 <p>
-  JPerlの側から見れば、利便性を考えた場合に、Perl 5.8のUnicodeサポートを利用する場合は、ひと手間増えるのは事実でした。
+  In fact, refactoring a program that uses jcode.pl or JCode.pm into the new Unicode mechanism takes a lot of effort.
 </p>
 <p>
-  また、新しいUnicodeの仕組みは、内部の文字コードと外部の文字コードを明確に区別するという仕組みでしたから、jcode.plやJCode.pmのエンコーディングの仕組みとは、根本的に概念が異なるのです。
+  From the JPerl side, it was a fact that it would take a lot of work to use Perl 5.8's Unicode support for convenience.
 </p>
 <p>
-  新しいUnicodeの仕組みは、不便で、よくわからないものでした。文字を結合すれば、文字化けするし、Wide Characterの警告を出しまくるし、これは、Perlコアチームの失敗だったと、感じたわけです。
+  Also, the new Unicode mechanism is a mechanism that clearly distinguishes between the internal character code and the external character code, so the concept is fundamentally different from the encoding mechanism of jcode.pl and JCode.pm. ..
 </p>
 <p>
-  utf8::is_utf8で、Perlが内部の文字コードを使っているか、外部の文字コードを使っているかを判定できると誤解されていた時期もありました。
+  The new Unicode mechanism was inconvenient and unclear. When I combined the characters, they were garbled and I got a Wide Character warning, and I felt that this was a failure of the Perl core team.
 </p>
 <p>
-  Perlに詳しい人や、Perlのコミュニティ、CPAN著者でも誤解して使っていました。
+  There was a time when utf8::is_utf8 was misunderstood that Perl could determine if it was using an internal character code or an external character code.
 </p>
 <p>
-  大混乱の時期があったわけです。
+  It was misunderstood by people familiar with Perl, the Perl community, and CPAN authors.
 </p>
 <p>
-  でも、僕が、Perlや文字コードを学んで2020年から振り返ってみると「Perlの後方互換性を保ちながら、Unicodeを導入するために、これより優れた方法はあったのだろうか?」と感じます。
+  There was a time of great turmoil.
 </p>
 <p>
-  「どうしたらよかったんだ?」と考えたときに、これより良い方法をなかなか思いつけないのです。
+  But when I learned Perl and character encoding and looked back from 2020, I asked, "Is there a better way to introduce Unicode while maintaining backward compatibility with Perl?" I feel it.
 </p>
 <p>
-  Perlのコアチームは、制約の中で、最善の実装をしたと思います。
-</p>
-<h4>単純な解決策は、外に出すときはencode、内にいれるときは、decode</h4>
-<p>
-  2020年におけるPerlの文字コードの単純で良い方針は、プログラムの外に出すときはEncodeモジュールのencode関数で、実際の文字コードに変換し、decode関数で、内部の文字コードに変換するというものです。
+  When I think "what should I do?", I can't think of a better way.
 </p>
 <p>
-  プログラムはUTF-8で保存し、先頭に「use utf8」を記述します。
+  I think Perl's core team has done the best implementation within the constraints.
+</p>
+<h4> The simple solution is encode when you go out, decode when you go inside </h4>
+<p>
+  The simple and good policy of Perl's character code in 2020 is to use the encode function of the Encode module to convert it to the actual character code, and then use the decode function to convert it to the internal character code. ..
 </p>
 <p>
-  これだけです。
+  Save the program in UTF-8 and write "use utf 8" at the beginning.
 </p>
 <p>
-  パフォーマンスや記述の楽さの点で、他の方法も存在しますが、まず、単純で、あらゆるパターンに対応できる、上記の方法を覚えるのがよいでしょう。
+  Only this.
 </p>
 <p>
-  詳しくは以下の記事で解説しています。
+  There are other ways to do it in terms of performance and ease of writing, but first it's a good idea to learn the above method, which is simple and can handle any pattern.
+</p>
+<p>
+  Details are explained in the following article.
 </p>
 <ul>
-  <li><a href="https://perlzemi.com/blog/20091118124667.html">Encodeモジュール - 日本語などのマルチバイト文字列を適切に処理する</a></li>
+  <li> <a href="https://perlzemi.com/blog/20091118124667.html"> Encode module-Properly handle multibyte strings such as Japanese</a> </li>
 </ul>
-<h3>よくある質問</h3>
-<h4>日本語ファイル名はどのように扱いますか?</h4>
+<h3> Frequently Asked Questions </h3>
+<h4> How do you handle Japanese file names? </h4>
 <p>
-  open関数に渡すときに、cp932にエンコードします。ファイル名は、プログラムの外側にあります(OSはプログラムの外側)ので、open関数を呼び出す位置で、encodeします。
+  Encode to cp932 when passing it to the open function. The file name is outside the program (OS is outside the program), so encode it at the position where you call the open function.
 </p>
 <pre>
 use utf8;
 
-my $file = 'あああ.txt';
+my $file ='Ah.txt';
 
-open my $fh, '&lt;', encode('cp932', $file)
+open my $fh,'&lt;', encode ('cp932', $file)
   or die "Can't open file: $!";
 </pre>
 <p>
-  open以外のファイル名を受け取る関数(unlinkやFile::Copy::copy, File::Copy::move)なども同じです。
+  The same applies to functions that receive file names other than open(unlink, File::Copy::copy, File::Copy::move).
 </p>
 <p>
-  あまりにもたくさんある場合は、サブルーチン化すると、少し楽になります。
+  If you have too many, subrouting it will make things a little easier.
 </p>
 <pre>
 use utf8;
@@ -231,14 +228,14 @@ use utf8;
 sub cp932 {
   my ($file) = @_;
   
-  $file = encode('cp932', $file);
+  $file = encode ('cp932', $file);
   
   return $file;
 }
 
-my $file = 'あああ.txt';
+my $file ='Ah.txt';
 
-open my $fh, '&lt;', cp932($file)
+open my $fh,'&lt;', cp932 ($file)
   or die "Can't open file: $!";
 </pre>
 
@@ -267,8 +264,7 @@ open my $fh, '&lt;', cp932($file)
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

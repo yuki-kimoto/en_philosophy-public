@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -26,8 +25,7 @@
 </script>
 
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YB6G48MD78"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-YB6G48MD78"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,8 +33,8 @@
 
   gtag('config', 'G-YB6G48MD78');
 </script>
-<title>Perlの正規表現はsedの表現を取り入れたもの - Perl Philosophy - Resolve the Mis-Understanding of Perl</title>
-<meta name="description" content="Perlの置換の正規表現って何かに似ていると思いませんか? そうですLinux/Unixのsedというコマンドによく似ていますね。">
+<title> Perl regular expressions incorporate sed expressions  - Perl Philosophy - Resolve the Mis-Understanding of Perl</title>
+<meta name="description" content="Don't you think Perl replacement regular expressions are similar to something? Yes, they are very similar to the Linux / Unix  sed  command.">
   </head>
   <body>
     <div class="container">
@@ -53,12 +51,11 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <h2><a href="/blog/20190924071341.html">Perlの正規表現はsedの表現を取り入れたもの</a></h2>
+    <h2><a href="/blog/20190924071341.html"> Perl regular expressions incorporate sed expressions </a></h2>
 <p>
-  Perlの置換の正規表現って何かに似ていると思いませんか? そうですLinux/Unixの<b>sed</b>というコマンドによく似ていますね。
+  Don't you think Perl replacement regular expressions are similar to something? Yes, they are very similar to the Linux / Unix <b> sed </b> command.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -77,58 +74,58 @@
 
 
 <pre>
-# Perlの置換の正規表現
-s/foo/bar/
+# Perl replacement regular expression
+s / foo / bar /
 
-# sedによる置換
-sed 's/foo/bar/'
+Replacement with #sed
+sed's / foo / bar /'
 </pre>
 <p>
-  sedですべて置換する場合のオプションもPerlと同じです。
+  The options for replacing everything with sed are the same as for Perl.
 </p>
 <pre>
-# Perlですべて置換する正規表現
-s/foo/bar/g
+#Regular expression to replace everything with Perl
+s / foo / bar / g
 
-# sedですべてを置換
-sed 's/foo/bar/g'
+Replace everything with #sed
+sed's / foo / bar / g'
 </pre>
-<h3>Perlはsedの表現を参考にしている</h3>
+<h3> Perl refers to the expression of sed </h3>
 <p>
-  Perlというプログラミング言語のひとつの利点は、<a href="https://en.linux.perlzemi.com/">Linux</a>/Unixで学んだものが、表現が概念をそのままPerlで、使えるということです。
+  One of the advantages of the programming language Perl is that what you learned in <a href="https://en.linux.perlzemi.com/"> Linux</a> / Unix is ​​that the expression is Perl as it is. It means that it can be used.
 </p>
 <p>
-  <b>Perlの置換の正規表現の場合も、Linux/Unixで慣れ親しんだsedコマンドの使い方を知っていれば、それをそのままPerlプログラミングで使うことができます。</b>
+  <b> For Perl replacement regular expressions, if you know how to use the sed command that you are familiar with on Linux / Unix, you can use it in Perl programming as it is. </b>
 </p>
 <p>
-  Linux/Unix環境で、シェルスクリプト、sed、awk、C言語を学んだユーザーにとっては、Perlの学習コストは、とても低いものになっています。
+  For users who have learned shell scripts, sed, awk, and C in a Linux / Unix environment, the cost of learning Perl is very low.
 </p>
 <p>
-  大学1年生のソフトウェアの授業で、C言語とUnix/Linuxサーバーについて、学ぶことと思います。C言語の文法を学習して、grep、sed、awkなどのLinuxコマンドを少し学びます。
+  You'll learn about C and Unix / Linux servers in a freshman software class. Learn C grammar and learn a little Linux commands such as grep, sed, and awk.
 </p>
 <p>
-  <b>C言語とUnix/Linuxサーバーについての知識があれば、Perlでは、使い方や概念を、そのまま活用することができるので、学習コストが低いのです。</b>
+  <b> If you have knowledge of C language and Unix / Linux server, Perl allows you to use the usage and concepts as they are, so the learning cost is low. </b>
 </p>
 <p>
-  Perlは学習コストが高いと誤解していませんでしたか。
+  Did you misunderstand that Perl has a high learning cost?
 </p>
 <p>
-  ソフトウェアエンジニアにとっては、C言語とUnix/Linuxサーバーの知識の学習は必須項目ですね。
+  For software engineers, learning the knowledge of C language and Unix / Linux server is a must.
 </p>
 <p>
-  その知識がしっかりしていれば、Perlの使い方を覚えるのに、１か月もかかりません。他の分野で覚えた概念がPerlでそのまま活用できるからです。
+  With that knowledge, it takes less than a month to learn how to use Perl. This is because the concepts learned in other fields can be used as they are in Perl.
 </p>
 <p>
-  sedの使い方がほぼそのまま使えるというのも、「ユーザーが見慣れた表現は使いやすい」というPerlの哲学に基づいています。
+  The fact that sed can be used almost as it is is based on Perl's philosophy that "expressions that users are familiar with are easy to use."
 </p>
 <p>
-  Perlは「つぎはぎだらけ」と批判する人たちは、Perlを否定的に語ります。
+  Those who criticize Perl as "patchy" say Perl negatively.
 </p>
 <p>
-  またPerlユーザー自身も、当たり前すぎて、Perlの使いやすさの秘密を、はっきりと理解していません。
+  And Perl users themselves are too obvious to understand the secrets of Perl's ease of use.
 </p>
 <p>
-  でも実際は、Perlの側から事実に基づいた評価を行うと、Perlは、Unix/Linuxとの親和性に非常に配慮した設計になっているといえるのです。
+  But in reality, from the factual side of Perl, it can be said that Perl is designed with great consideration for its compatibility with Unix / Linux.
 </p>
 
   </div>
@@ -156,8 +153,7 @@ sed 's/foo/bar/g'
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

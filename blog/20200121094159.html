@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -26,8 +25,7 @@
 </script>
 
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YB6G48MD78"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-YB6G48MD78"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,8 +33,8 @@
 
   gtag('config', 'G-YB6G48MD78');
 </script>
-<title>関数(サブルーチン)の引数を追加できるという動的型言語の利点 - Perl Philosophy - Resolve the Mis-Understanding of Perl</title>
-<meta name="description" content="Perlを始めとする動的型言語の関数(サブルーチン)の引数の個数は動的であり、サブルーチンの実装をした後でも、引数を追加することができます。">
+<title> Advantages of dynamically typed languages ​​that can add function (subroutine) arguments  - Perl Philosophy - Resolve the Mis-Understanding of Perl</title>
+<meta name="description" content="The number of arguments of a function (subroutine) of a dynamic language such as Perl is dynamic, and you can add arguments even after implementing the subroutine.">
   </head>
   <body>
     <div class="container">
@@ -53,12 +51,11 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <h2><a href="/blog/20200121094159.html">関数(サブルーチン)の引数を追加できるという動的型言語の利点</a></h2>
+    <h2><a href="/blog/20200121094159.html"> Advantages of dynamically typed languages ​​that can add function (subroutine) arguments </a></h2>
 <p>
-  Perlを始めとする動的型言語の関数(サブルーチン)の引数の個数は動的であり、サブルーチンの実装をした後でも、引数を追加することができます。
+  The number of arguments of a function (subroutine) of a dynamic language such as Perl is dynamic, and you can add arguments even after implementing the subroutine.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -77,43 +74,43 @@
 
 
 <p>
-  これは、サブルーチンの定義が修正されても、元の関数呼び出しを修正する必要がないということを意味します。
+  This means that if the subroutine definition is modified, the original function call does not need to be modified.
 </p>
 <pre>
-# 最初は一つの引数
+# First one argument
 sub func {
   my ($arg) = @_;
 }
 
-# 呼び出し
-func(1);
+#Call
+func (1);
 </pre>
 <p>
-  ここで、このサブルーチンにオプションが必要になったとしましょう。この場合、元の呼び出し個所を修正する必要がありません。
+  Now suppose you need an option for this subroutine. In this case, there is no need to modify the original call location.
 </p>
 <pre>
-# オプションを追加
+# Add option
 sub func {
   my ($arg, $opt) = @_;
   
-  $opt ||= {};
+  $opt || = {};
 }
 
-# 元の呼び出しは、修正しなくてよい
-func(1);
+#The original call doesn't have to be modified
+func (1);
 
-# オプション付き呼び出し
-func(1, {foo =&gt; 4});
+#Call with options
+func (1, {foo =&gt; 4});
 </pre>
-<h3>静的型言語で実現するにはどのような手法が考えられますか?</h3>
+<h3> What kind of method can be considered to realize it in a statically type language? </H3>
 <p>
-  たとえば、JavaやC++のオーバーロード機能を使えば、元の呼び出しを壊すことなく、同じ名前で、引数の個数を変えて、新しいメソッドを定義できます。
+  For example, you can use the Java or C ++ overload feature to define a new method with the same name, but with a different number of arguments, without breaking the original call.
 </p>
 <p>
-  ただし、この場合は、メソッドを新しく定義したので、メソッド定義の個数が増えます。
+  However, in this case, since the method is newly defined, the number of method definitions increases.
 </p>
 <p>
-  元のメソッド自体の引数を増やしたのではないことに注意してください。
+  Note that we did not increase the arguments of the original method itself.
 </p>
 
   </div>
@@ -141,8 +138,7 @@ func(1, {foo =&gt; 4});
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

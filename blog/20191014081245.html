@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -26,8 +25,7 @@
 </script>
 
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YB6G48MD78"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-YB6G48MD78"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,8 +33,8 @@
 
   gtag('config', 'G-YB6G48MD78');
 </script>
-<title>Perlがどういう意味でLispに皮を被せたものなのか - Perl Philosophy - Resolve the Mis-Understanding of Perl</title>
-<meta name="description" content="Perlの作者のラリー・ウォールは「動的言語はLispに皮を被せたもの」といいましたが、いったいこれはどういう意味なのでしょうか?">
+<title> What does Perl mean by covering Lisp?  - Perl Philosophy - Resolve the Mis-Understanding of Perl</title>
+<meta name="description" content="Perl author Larry Wall said, "Dynamic languages ​​are Lisp covered", but what exactly does this mean?">
   </head>
   <body>
     <div class="container">
@@ -53,12 +51,11 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <h2><a href="/blog/20191014081245.html">Perlがどういう意味でLispに皮を被せたものなのか</a></h2>
+    <h2><a href="/blog/20191014081245.html"> What does Perl mean by covering Lisp? </a></H2>
 <p>
-  Perlの作者のラリー・ウォールは「動的言語はLispに皮を被せたもの」といいましたが、いったいこれはどういう意味なのでしょうか?
+  Perl author Larry Wall said, "Dynamic languages ​​are Lisp covered", but what exactly does this mean?
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -77,77 +74,77 @@
 
 
 <p>
-  PerlはLispは、表面的には、まったく違うもののように見えます。
+  Perl and Lisp look like something completely different on the surface.
 </p>
-<h4>Perlの文法</h4>
+<h4> Perl grammar </h4>
 <p>
-  Perlの足し算の文法を書きます。
+  Write Perl's addition grammar.
 </p>
 <pre>
-# Perlの足し算
+# Perl addition
 my $out1 = $x + $y
 my $out2 = $out1 + 5;
 </pre>
-<h4>Lispの文法</h4>
+<h4> Lisp grammar </h4>
 <p>
-  Lispの足し算の文法。
+  Lisp addition grammar.
 </p>
 <pre>
-; Lispの足し算
+Addition of Lisp
 (+ (+ x y) 5)
 </pre>
-<h3>Perlがどういう意味でLispに皮を被せたものなのか</h3>
+<h3> What does Perl mean by covering Lisp? </H3>
 <p>
-  Perlがどういう意味でLispに皮を被せたものなのか、比較してみます。
+  Let's compare what Perl means to cover Lisp.
 </p>
-<h4>演算子を真ん中に置くのは人間の都合</h4>
+<h4> It is human convenience to put the operator in the middle </h4>
 <p>
-  Perlにはかっこがなく、「+」記号は真ん中に来ています。それに対して、Lispには、かっこがありますね。そして「+」記号が先頭に来ていますね。
-</p>
-<p>
-  Lispの場合は、関数呼び出しも、演算子も先頭に来ます。つまり、命令と呼ばれるものは、常に先頭に来るのです。
+  Perl has no parentheses and the "+" sign is in the middle. On the other hand, Lisp has parentheses. And the "+" sign is at the beginning.
 </p>
 <p>
-  実は、「+」記号を真ん中に置くというのは、人間が数学の記法を書くときに、真ん中に書くということが、慣習的に行われているので、見やすいということなのです。
+  In Lisp, both function calls and operators come first. In other words, what is called an instruction always comes first.
 </p>
 <p>
-  コンピューターの側から見ると、関数呼び出し命令や加算命令というのは、先頭に来るのが自然です。実際、機械語やアセンブラでは、先頭に来るからです。
+  In fact, putting the "+" sign in the middle means that when humans write math notation, it's customary to write it in the middle, so it's easy to see.
 </p>
 <p>
-  「+」が真ん中に来るというのは、人間の立場から見た場合の、シンタックスシュガーなのですね。
-</p>
-<h4>Lispは構文木自体を実行する</h4>
-<p>
-  またリスプはかっこのネストになっていますが、これは実際には、構文木自体をを表現しています。
+  From the computer's point of view, function call instructions and addition instructions naturally come first. In fact, in machine language and assembler, it comes first.
 </p>
 <p>
-  「(+ x y)」というのは、最初の「+」演算の左側のノードとして存在しているのです。そして、最も左下に属するノードから順次実行されていきます。
+  The fact that the "+" comes in the middle is syntactic sugar from a human point of view, isn't it?
+</p>
+<h4> Lisp executes the syntax tree itself </h4>
+<p>
+  Lisp is also a nest of parentheses, which actually represents the syntax tree itself.
 </p>
 <p>
-  これは、ちょうどPerlが、コンパイルされて抽象構文木になった後に、最も左下のノードから順次実行されていくということと対応しています。
+  "(+ X y)" exists as the node to the left of the first "+" operation. Then, it will be executed sequentially from the node belonging to the lower left.
 </p>
 <p>
-  つまり、Perlは、構文木にコンパイルされると、Lispと同じ構造になります。
-</p>
-<h4>Lispは、リストと命令が存在するだけで、プログラムが動くことを証明した</h4>
-<p>
-  Lispの偉大さは、リストと命令が存在するだけで、プログラムが動くことを証明したとうことです。リストは、動的なデータ構造で、pushとpopを行うことができます。
+  This just corresponds to Perl running sequentially from the bottom left node after it has been compiled into an abstract syntax tree.
 </p>
 <p>
-  動的なデータ構造と、命令が存在するとプログラムが動く。おっと、これは、まさにPerlではないですか。
+  That is, Perl has the same structure as Lisp when compiled into a syntax tree.
+</p>
+<h4> Lisp proved that the program works just with the presence of lists and instructions </h4>
+<p>
+  The great thing about Lisp is that it proves that a program works just by the presence of lists and instructions. Lists are dynamic data structures that can be pushed and popped.
+</p>
+<p>
+  The program runs in the presence of dynamic data structures and instructions. Oops, isn't this exactly Perl?
 </p>
 <pre>
-# 関数命令
+#Functional instructions
 sub foo {
-  # 動的なリスト
+  #Dynamic list
   my ($num1, $num2, $num3) = @_;
 }
 </pre>
 <p>
-  PerlとLispは、表面的な見た目は、まったく異なりますが、Perlは、人間が使いやすい用にLispに皮を被せたものだったのです。
+  Perl and Lisp look completely different on the surface, but Perl was a cover of Lisp for human convenience.
 </p>
 <p>
-  あらゆる動的言語は、この意味でLispから恩恵を受けているといって過言ではないでしょう。
+  It is no exaggeration to say that all dynamic languages ​​benefit from Lisp in this sense.
 </p>
 
   </div>
@@ -175,8 +172,7 @@ sub foo {
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

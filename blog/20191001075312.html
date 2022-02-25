@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -26,8 +25,7 @@
 </script>
 
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YB6G48MD78"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-YB6G48MD78"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,8 +33,8 @@
 
   gtag('config', 'G-YB6G48MD78');
 </script>
-<title>Perlの演算子とC言語の演算子は、種類が似ていて、優先順位が同じ - Perl Philosophy - Resolve the Mis-Understanding of Perl</title>
-<meta name="description" content="Perlの演算子とC言語の演算子は、種類が似ていて、演算子の優先順位が同じです。">
+<title> Perl operators and C operators are similar in type and have the same priority  - Perl Philosophy - Resolve the Mis-Understanding of Perl</title>
+<meta name="description" content="Perl operators and C operators are similar in type and have the same operator precedence.">
   </head>
   <body>
     <div class="container">
@@ -53,12 +51,11 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <h2><a href="/blog/20191001075312.html">Perlの演算子とC言語の演算子は、種類が似ていて、優先順位が同じ</a></h2>
+    <h2><a href="/blog/20191001075312.html"> Perl operators and C operators are similar in type and have the same priority </a></h2>
 <p>
-  Perlの演算子とC言語の演算子は、種類が似ていて、演算子の優先順位が同じです。
+  Perl operators and C operators are similar in type and have the same operator precedence.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -76,218 +73,216 @@
 </div>
 
 
-<h4>Perlの演算子</h4>
+<h4> Perl operators </h4>
 <p>
-  Perlの演算子です。C言語の演算子と同じものと、機能が似ているものを取り上げました。加算演算子、減算演算子、減算演算子、減算演算子、剰余演算子、インクリメント/デクリメントなどの算術演算子、数値比較演算子、論理演算子、単項演算子、シフト演算子、アロー演算子、３項演算子を取り上げています。
+  Perl operator. We have picked up the same operators in C language and the ones with similar functions. Addition operator, subtraction operator, subtraction operator, subtraction operator, remainder operator, arithmetic operator such as increment / decrement, numerical comparison operator, logical operator, single term operator, shift operator, arrow operator, The three-term operator is taken up.
 </p>
 <pre>
-# 加算演算子
+# Addition operator
 my $ret = $x + $y;
 
-# 減算演算子
-my $ret = $x - $y;
+# Subtraction operator
+my $ret = $x-$y;
 
-# 減算演算子
+# Subtraction operator
 my $ret = $x * $y;
 
-# 減算演算子
+# Subtraction operator
 my $ret = $x / $y;
 
-# 剰余演算子
-my $ret = $x % $y;
+#Remainder operator
+my $ret = $x%$y;
 
-# インクリメント/デクリメント
-my $ret = ++$x;
-my $ret = $x++;
+#Increment / decrement
+my $ret = ++ $x;
+my $ret = $x ++;
 my $ret = --$x;
-my $ret = $x--;
+my $ret = $x-;
 
-# 数値の比較演算子
-my $ret = $x &gt; $y;
-my $ret = $x &gt;= $y;
-my $ret = $x &lt; $y;
+# Numerical comparison operator
+my $ret = $x&gt; $y;
+my $ret = $x&gt; = $y;
+my $ret = $x &lt;$y;
 my $ret = $x &lt;= $y;
 my $ret = $x == $y;
-my $ret = $x != $y;
+my $ret = $x! = $y;
 
-# 論理演算子
+# Logical operator
 my $ret = $x &amp;&amp; $y;
 my $ret = $x || $y;
-my $ret = !$x;
+my $ret =! $x;
 
-# 単項演算子
-my $ret = +$x;
-my $ret = -$x;
+# Unary operator
+my $ret = + $x;
+my $ret =-$x;
 
-# 右シフト演算子
+#Right shift operator
 my $ret = $x &lt;&lt; $y;
 
-# 左シフト演算子
+#Left shift operator
 my $ret = $x &gt;&gt; $y;
 
-# 代入演算子
+# Substitution operator
 my $ret = $x;
-my $ret += $x;
-my $ret -= $x;
-my $ret *= $x;
-my $ret /= $x;
-my $ret %= $x;
-my $ret &gt;&gt;= $x;
-my $ret &lt;&lt;= $x;
+my $ret + = $x;
+my $ret-= $x;
+my $ret * = $x;
+my $ret / = $x;
+my $ret%= $x;
+my $ret &gt;&gt; = $x;
+my $ret &lt;&lt; = $x;
 
-# アロー演算子
+#Arrow operator
 my $ret = $foo-&gt;{x};
 
-# もしアクセッサを定義すれば、上記は以下のように書ける
+# If you define an accessor, the above can be written as
 my $ret = $foo-&gt;x;
 
-# 3項演算子
-my $ret = $flag ? $x : $y;
+# Ternary operator
+my $ret = $flag? $x: $y;
 </pre>
-<h4>C言語の演算子</h4>
+<h4> C operator </h4>
 <p>
-  C言語の演算子です。加算演算子、減算演算子、減算演算子、減算演算子、剰余演算子、インクリメント/デクリメントなどの算術演算子、数値比較演算子、論理演算子、単項演算子、シフト演算子、アロー演算子、３項演算子を取り上げています。
+  C language operator. Addition operator, subtraction operator, subtraction operator, subtraction operator, remainder operator, arithmetic operator such as increment / decrement, numerical comparison operator, logical operator, single term operator, shift operator, arrow operator, The three-term operator is taken up.
 </p>
 <pre>
-// 加算演算子
+// Addition operator
 int32_t ret = x + y;
 
-// 減算演算子
-int32_t ret = x - y;
+// Subtraction operator
+int32_t ret = x --y;
 
-// 乗算演算子
+// Multiplication operator
 int32_t ret = x * y;
 
-// 除算演算子
+// Division operator
 int32_t ret = x / y;
 
-// 剰余演算子
-int32_t ret = x % y;
+// Residual operator
+int32_t ret = x%y;
 
-// インクリメント/デクリメント
-int32_t ret = ++x;
-int32_t ret = x++;
+// Increment / Decrement
+int32_t ret = ++ x;
+int32_t ret = x ++;
 int32_t ret = --x;
-int32_t ret = x--;
+int32_t ret = x-;
 
-// 数値の比較演算子
-int32_t ret = x &gt; y;
-int32_t ret = x &gt;= y;
-int32_t ret = x &lt; y;
+// Numeric comparison operator
+int32_t ret = x&gt; y;
+int32_t ret = x&gt; = y;
+int32_t ret = x &lt;y;
 int32_t ret = x &lt;= y;
 int32_t ret = x == y;
-int32_t ret = x != y;
+int32_t ret = x! = y;
 
-// 論理演算子
+// Logical operator
 int32_t ret = x &amp;&amp; y;
 int32_t ret = x || y;
-int32_t ret = !x;
+int32_t ret =! x;
 
-// 単項演算子
-int32_t ret = +x;
+// Unary operator
+int32_t ret = + x;
 int32_t ret = -x;
 
-// 右シフト演算子
+// Right shift operator
 int32_t ret = x &lt;&lt; y;
 
-// 左シフト演算子
+// Left shift operator
 int32_t ret = x &gt;&gt; y;
 
-// 代入演算子
+// Assignment operator
 int32_t ret = x;
-int32_t ret += x;
-int32_t ret -= x;
-int32_t ret *= x;
-int32_t ret /= x;
-int32_t ret %= x;
-int32_t ret &gt;&gt;= x;
-int32_t ret &lt;&lt;= x;
+int32_t ret + = x;
+int32_t ret-= x;
+int32_t ret * = x;
+int32_t ret / = x;
+int32_t ret%= x;
+int32_t ret &gt;&gt; = x;
+int32_t ret &lt;&lt; = x;
 
-// アロー演算子
+// Arrow operator
 int32_t ret = foo-&gt;x;
 
-// 3項演算子
-int32_t ret = flag ? x : y;
+// Ternary operator
+int32_t ret = flag? x: y;
 </pre>
-<h4>Perlの演算子とC言語の演算子の比較</h4>
+<h4> Comparison of Perl operators and C operators </h4>
 <p>
-  Perlの演算子の数値演算子、数値の比較演算子、単項演算子、論理演算子、シフト演算子、インクリメント/デクリメント、代入演算子、3項演算子は、C言語と機能が同じです。
+  Numerical operators, numeric comparison operators, single-term operators, logical operators, shift operators, increment / decrement, assignment operators, and ternary operators of Perl operators have the same functions as C language.
 </p>
 <p>
-  代入演算子は、式を返すという点でもC言語と同じです。代入文ではなく、代入式として評価されます。
+  The assignment operator is the same as in C in that it returns an expression. It is evaluated as an assignment expression, not an assignment statement.
 </p>
 <p>
-  Perlのアロー演算子は、参照を通してフィールドにアクセスできるという点がC言語と似ています。
+  Perl's arrow operators are similar to C in that you can access fields through references.
 </p>
 <p>
-  アクセッサと呼ばれる、フィールドにアクセスするための、メソッドを定義してやると、Perlのフィールドアクセスと、C言語のフィールドアクセスは、値を取得する場合は、見た目が同じになります。
+  If you define a method for accessing a field called an accessor, Perl field access and C field access will look the same when you get the value.
 </p>
 <p>
-  C言語には3項演算子がありますが、Perlにも存在しています。条件に応じて、値を返すことのできる演算子です。
+  The C language has a ternary operator, but it also exists in Perl. An operator that can return a value depending on the condition.
 </p>
-<h4>Perlの演算子の優先順位</h4>
+<h4> Perl operator precedence </h4>
 <p>
-  Perlの演算子の優先順位です。高い方から書き出しています。
+  Perl operator precedence. I am writing from the highest one.
 </p>
 <pre>
-左結合      -&gt;
-非結合      ++ --
-右結合      ! 単項の+ 単項の-
-左結合      * / % x
-左結合      + -
-左結合      &lt;&lt; &gt;&gt;
-非結合      &lt; &gt; &lt;= &gt;=
-非結合      == !=
-左結合      &amp;&amp;
-左結合      ||
-右結合      = += -= *= などの代入演算子
+Left join-&gt;Unbound++ -
+Right join! Unary + unary-
+Left join * /%x
+Left join +-
+Left join &lt;&lt; &gt;&gt;
+Unbonded &lt;&gt; &lt;=&gt; =
+Unbonded ==! =
+Left join &amp;&amp;
+Left join ||
+Assignment operators such as right join = + =-= * =
 </pre>
-<h4>C言語の演算子の優先順位</h4>
+<h4> C language operator precedence </h4>
 <p>
-  C言語の演算子の優先順位です。高い方から書き出しています。
+  The precedence of C language operators. I am writing from the highest one.
 </p>
 <pre>
-左結合	++ -- -&gt;
-右結合	! 単項+ 単項- ++ --
-左結合	* / %
-左結合	+ -
-左結合 &lt;&lt; &gt;&gt;
-左結合&lt; &lt;= &gt; &gt;=
-左結合 == !=
-左結合 &amp;&amp;
-左結合 ||
-右結合 = += -= *= /= %= &lt;&lt;= &gt;&gt;= などの代入演算子
+Left join ++--&gt;Rightjoin! Unary + unary-++-
+Left join * /%
+Left join +-
+Left join &lt;&lt; &gt;&gt;
+Left join &lt;=&gt;&gt; =
+Left join ==! =
+Left join &amp;&amp;
+Left join ||
+Right join = + =-= * = / =%= &lt;&lt; = &gt;&gt; = and other assignment operators
 </pre>
-<h4>Perlの演算子の優先順位とC言語の演算子の優先順位の比較</h4>
+<h4> Comparison of Perl operator precedence and C operator precedence </h4>
 <p>
-  Perlの演算子の優先順位とC言語の演算子の優先順位の比較してみましょう。Perlでは、アロー演算子がインクリメント/デクリメント演算子より優先順位が高いことを除いて、C言語と同一です。
+  Let's compare the precedence of Perl operators with the precedence of C operators. In Perl, it is the same as in C, except that the arrow operator has higher precedence than the increment / decrement operator.
 </p>
 <p>
-  Perlでは、C言語で覚えた、演算子の優先順位をほぼそのまま使うことができます。
+  In Perl, you can use the operator precedence that you learned in C almost as it is.
 </p>
 <p>
-  C言語の演算子や演算子の優先順位に対して、バグが生まれやすいなど、事実に基づかない、過剰な批判をする人もいます。
+  Some people over-criticize C-language operators and operator priorities without being based on facts, such as being prone to bugs.
 </p>
 <p>
-  一方で、Perlは、C言語の演算子の優先順を、そのまま受け入れています。
+  Perl, on the other hand, accepts the C language operator precedence as it is.
 </p>
 <p>
-  これは、C言語を学んだことのあるユーザーが、混乱せずに、その知識をそのまま使えるように、Perlでは、配慮されているということです。
+  This means that Perl takes care so that users who have learned the C language can use their knowledge as it is without any confusion.
 </p>
 <p>
-  C言語は入門教材で、必ず出てくるといってもよいプログラミング言語です。Perlは、C言語に見慣れたユーザーが、混乱しないで、すぐに使い始められるようになっています。
+  C language is an introductory material and is a programming language that can be said to come out without fail. Perl is ready for users familiar with the C language to get started quickly without any confusion.
 </p>
-<h3>PerlとC言語の他の類似点</h3>
+<h3> Other similarities between Perl and C </h3>
 <p>
-  この記事では、Perlの演算子の種類と演算子の優先順位がC言語と似ているということを書きましたが、Perlのif文、for文、while文、インクリメント/デクリメント、演算子の優先順位、スコープ、参照概念も、C言語の文法と似ています。
+  In this article, I wrote that Perl's operator types and operator priorities are similar to C, but Perl's if statements, for statements, while statements, increments / decrements, and operator priorities. The order, scope, and reference concept are similar to the C language grammar.
 </p>
 <ul>
-  <li><a href="/blog/20190926072429.html">Perlのif文はC言語のif文に似ている</a></li>
-  <li><a href="/blog/20190925080555.html">Perlのfor文は、C言語のfor文と、同一の文法</a></li>
-  <li><a href="/blog/20191001073128.html">Perlのwhile文は、C言語のwhile文と、同一の文法</a></li>
-  <li><a href="/blog/20190920082045.html">Perlのインクリメント/デクリメントの動作はC言語と同じ</a></li>
-  <li><a href="/blog/20191002073518.html">Perlは単独のスコープがC言語と同じように使える</a></li>
-  <li><a href="/blog/20191002075550.html">Perlのリファレンスの機能は、C言語のポインタの機能と同じ</a></li>
+  <li> <a href="/blog/20190926072429.html"> Perl if statements are similar to C if statements</a> </li>
+  <li> <a href="/blog/20190925080555.html"> Perl for statement has the same grammar as C language for statement</a> </li>
+  <li> <a href="/blog/20191001073128.html"> Perl while statement has the same grammar as C language while statement</a> </li>
+  <li> <a href="/blog/20190920082045.html"> Perl increments / decrements work the same as in C</a> </li>
+  <li> <a href="/blog/20191002073518.html"> Perl can use a single scope in the same way as C</a> </li>
+  <li> <a href="/blog/20191002075550.html"> Perl reference functionality is the same as C pointer functionality</a> </li>
 </ul>
 
   </div>
@@ -315,8 +310,7 @@ int32_t ret = flag ? x : y;
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

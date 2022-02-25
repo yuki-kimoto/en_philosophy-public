@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -26,8 +25,7 @@
 </script>
 
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YB6G48MD78"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-YB6G48MD78"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,8 +33,8 @@
 
   gtag('config', 'G-YB6G48MD78');
 </script>
-<title>PerlでもマルチCPUを最大限に活用できる - Perl Philosophy - Resolve the Mis-Understanding of Perl</title>
-<meta name="description" content="Perlでは、マルチCPU対応の方法を解説します。PerlではマルチCPU対応できないのではないかという誤解が、Web上には、たくさんあります。">
+<title> You can make the most of multiCPU even in Perl  - Perl Philosophy - Resolve the Mis-Understanding of Perl</title>
+<meta name="description" content="Perl explains how to support multiple CPUs. There are many misunderstandings on the Web that Perl may not support multiple CPUs.">
   </head>
   <body>
     <div class="container">
@@ -53,12 +51,11 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <h2><a href="/blog/20190918081634.html">PerlでもマルチCPUを最大限に活用できる</a></h2>
+    <h2><a href="/blog/20190918081634.html"> You can make the most of multiCPU even in Perl </a></h2>
 <p>
-  Perlでは、マルチCPU対応の方法を解説します。PerlではマルチCPU対応できないのではないかという誤解が、Web上には、たくさんあります。
+  Perl explains how to support multiple CPUs. There are many misunderstandings on the Web that Perl may not support multiple CPUs.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -77,85 +74,85 @@
 
 
 <p>
-  正確な情報は、ある方法であれば、マルチCPU対応ができて、ある方法では、マルチCPU対応できないということです。
+  The exact information is that one method can support multiple CPUs, and another method cannot.
 </p>
 <p>
-  どのような方法であれば、マルチCPU対応がができて、どのような方法では、マルチCPU対応できないのか、把握しておきましょう。
+  Let's understand what kind of method can support multi-CPU and what kind of method can not support multi-CPU.
 </p>
-<h3>Webアプリにおけるプリフォークを使ったマルチCPU対応</h3>
+<h3> Multi-CPU support using pre-fork in web applications </h3>
 <p>
-  Perlでは、Webアプリケーションであれば、プリフォークという機能を使って、マルチCPU対応ができます。
-</p>
-<p>
-  プリフォークという機能を使うと、マルチCPUの資源をフル活用することができます。
+  In Perl, if it is a Web application, you can use a function called prefork to support multiple CPUs.
 </p>
 <p>
-  <b>誤解を解いておくと、Perlでは、Webアプリにおいては、プリフォークに対応したWebサーバーを利用すれば、マルチCPUの資源をフルに活用できるということです。</b>
+  You can make full use of the resources of multiple CPUs by using a function called prefork.
 </p>
 <p>
-  プリフォークに対応したWebサーバーには、StarmanやMojoliciousがあります。
-</p>
-<h4>Starman</h4>
-<p>
-  StarmanはPerlのプリフォークに対応したWebサーバーです。
-</p>
-<blockquote>
-<p>
-  StarmanはNet::Serverモジュールをベースとした多機能なPrefork型のWebサーバです。作者はPSGI/Plackの開発や仕様策定を行っている宮川氏です。
+  <b> The misunderstanding is that in Perl, you can make full use of the resources of multiple CPUs by using a web server that supports preforking in your web application. </b>
 </p>
 <p>
-  <a href="https://gihyo.jp/dev/serial/01/perl-hackers-hub/002402">第24回　PSGI/Plack実践入門―Starman，Starlet，Twiggy，Plack::Middleware，Server::Starter（2）></a>
+  Web servers that support prefolk include Starman and Mojolicious.
 </p>
-</blockquote>
-<h4>Mojolicious</h4>
+<h4> Starman </h4>
 <p>
-  MojoliciousというPerlのWebフレームワークは、プリフォークに対応したWebサーバーを持っています。
+  Starman is a web server that supports Perl prefolks.
 </p>
 <blockquote>
 <p>
-  Mojo::Server::Preforkは完全の機能を備えたUNIXに最適化された プリフォークの非同期IOのHTTPとWebSocketの組み込みのサーバーです。
+  Starman is a versatile Prefork web server based on the Net::Server module. The author is Mr. Miyagawa who develops PSGI / Plack and formulates specifications.
 </p>
 <p>
-  <a href="https://github.com/yuki-kimoto/mojolicious-guides-japanese/wiki/Mojo::Server::Prefork">Mojo::Server::Prefork - プリフォークのノンブロッキングIOのHTTPとWebSocketのサーバー</a>
+  <a href="https://gihyo.jp/dev/serial/01/perl-hackers-hub/002402"> The 24th PSGI / Plack Practice Introduction-Starman, Starlet, Twiggy, Plack::Middleware, Server: : Starter (2)></a>
 </p>
 </blockquote>
-<h3>なぜPerlは、マルチCPUを有効に利用できないと信じられているの?</h3>
+<h4> Mojolicious </h4>
 <p>
-  一般的に、マルチCPU対応は、一番最初の話題として、スレッドの話題で始まるからです。
+  A Perl web framework called Mojolicious has a prefolk-enabled web server.
+</p>
+<blockquote>
+<p>
+  Mojo::Server::Prefork is a full-featured UNIX-optimized UNIX-optimized asynchronous IO HTTP and WebSocket built-in server.
 </p>
 <p>
-  あるいは、スレッドではないが、マルチCPUを利用できる仕組みを言語が持っているかという話題から始まるからです。
+  <a href="https://github.com/yuki-kimoto/mojolicious-guides-japanese/wiki/Mojo::Server::Prefork"> Mojo::Server::Prefork --Prefork non-blocking IO HTTP WebSocket server</a>
+</p>
+</blockquote>
+<h3> Why is it believed that Perl cannot make good use of multiCPUs? </h3>
+<p>
+  In general, multi-CPU support starts with the topic of threads as the very first topic.
 </p>
 <p>
-  Perlの場合は、スレッドが非推奨な機能であり、シングルスレッドで運用することが、想定されています。
+  Or, it's not a thread, but it starts with the topic of whether the language has a mechanism that can use multiple CPUs.
 </p>
 <p>
-  Perlは、言語機能としては、マルチCPU対応ではないのです。
+  In the case of Perl, threads are a deprecated feature and are expected to operate as a single thread.
 </p>
 <p>
-  このことから、Perlは、言語機能としてはマルチCPU対応ではないということが、間違って伝達され、PerlではマルチCPU対応できないという風に誤解されています。
+  Perl is not multi-CPU compatible as a language feature.
 </p>
 <p>
-  Perlは、Unix/Linuxのフォーク機能を使用し、プリフォークを実装しているWebサーバーを使えば、Webアプリにおいて、マルチCPU対応できます。
+  From this, it is misunderstood that Perl is not multi-CPU compatible as a language function, and it is misunderstood that Perl cannot support multi-CPU.
 </p>
 <p>
-  <b>Perlの言語自体の機能としてはありませんが、言語自体の機能を使わない方法を使えば、マルチCPU対応できるのです。</b>
-</p>
-<h3>XSという言語拡張を使えば、GPUやCPUによる並列化も可能</h3>
-<p>
-  並列処理といった場合に、本当に並列化によるパフォーマンスを求めるのであれば、スレッドというのは、不十分なパフォーマンスしか出せないということを、知っておく必要があります。
+  Perl uses the Unix / Linux fork function, and if you use a web server that implements preforking, you can support multiple CPUs in your web application.
 </p>
 <p>
-  スレッド切り替えのコストは高く、スレッドの個数を3倍にしても、パフォーマンスが3倍になることはありません。
+  <b> It's not a feature of Perl's language itself, but if you use a method that doesn't use the feature of the language itself, you can support multiple CPUs. </b>
+</p>
+<h3> If you use the language extension called XS, parallelization by GPU and CPU is also possible </h3>
+<p>
+  When it comes to parallel processing, if you really want the performance of parallelization, you need to know that threads can only give you poor performance.
 </p>
 <p>
-  計算資源を最大限に使うためには、GPUやCPUといったハードウェアレベルの最適化が必要になってきます。
+  The cost of thread switching is high, and triple the number of threads does not triple the performance.
 </p>
 <p>
-  Perlでは、<a href="https://perlzemi.com/blog/20100809127859.html">XSというC/C++による言語拡張機能</a>を使えば、C/C++やGPUを記述するためのC風の言語を使って、ハードウェアによる並列処理を実行できます。
+  In order to make the best use of computational resources, it is necessary to optimize at the hardware level such as GPU and CPU.
 </p>
 <p>
-  <b>Perlレベルでは、シングルスレッドですが、C/C++レベルで記述を行うと、CPUやGPUなどのハードウェアの並列機能を最大限に活用することができます。</b>
+  In Perl, you can use <a href="https://perlzemi.com/blog/20100809127859.html"> XS, a C / C ++ language extension</a> to write C / C ++ and GPUs. You can perform parallel processing by hardware using a C-like language.
+</p>
+<p>
+  <b> At the Perl level, it is single thread, but if you write it at the C / C ++ level, you can make the best use of the parallel function of hardware such as CPU and GPU. </b>
 </p>
 
   </div>
@@ -183,8 +180,7 @@
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

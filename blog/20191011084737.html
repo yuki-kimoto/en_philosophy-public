@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -26,8 +25,7 @@
 </script>
 
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YB6G48MD78"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-YB6G48MD78"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,8 +33,8 @@
 
   gtag('config', 'G-YB6G48MD78');
 </script>
-<title>Perlがコンパイル作業なしすぐに実行できるのはシェルスクリプトと同じ - Perl Philosophy - Resolve the Mis-Understanding of Perl</title>
-<meta name="description" content="Perlが、コンパイル作業なしすぐに実行できるのはシェルスクリプト(sh,bash,csh,ksh,zsh)と同じです。スクリプト言語と呼ばれる言語のひとつの特徴は、コンパイル作業なしで、すぐに実行できるというのが上げらます。">
+<title> Perl can be executed immediately without compiling, just like a shell script  - Perl Philosophy - Resolve the Mis-Understanding of Perl</title>
+<meta name="description" content="Perl can run immediately without compiling, just like shell scripts (sh, bash, csh, ksh, zsh). One of the characteristics of a language called a scripting language is that it can be executed immediately without compiling.">
   </head>
   <body>
     <div class="container">
@@ -53,12 +51,11 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <h2><a href="/blog/20191011084737.html">Perlがコンパイル作業なしすぐに実行できるのはシェルスクリプトと同じ</a></h2>
+    <h2><a href="/blog/20191011084737.html"> Perl can be executed immediately without compiling, just like a shell script </a></h2>
 <p>
-  Perlが、コンパイル作業なしすぐに実行できるのはシェルスクリプト(sh,bash,csh,ksh,zsh)と同じです。スクリプト言語と呼ばれる言語のひとつの特徴は、コンパイル作業なしで、すぐに実行できるというのが上げらます。
+  Perl can run immediately without compiling, just like shell scripts (sh, bash, csh, ksh, zsh). One of the characteristics of a language called a scripting language is that it can be executed immediately without compiling.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -77,52 +74,52 @@
 
 
 <p>
-  プログラムを書く、すぐに実行というサイクルをとれるので、プログラム作成の生産効率が高いです。
+  Since the cycle of writing a program and executing it immediately can be taken, the production efficiency of program creation is high.
 </p>
-<h4>Perlにおけるプログラムの実行</h4>
+<h4> Executing a program in Perl </h4>
 <p>
-  Perlにおけるプログラムの実行です。
+  Execution of a program in Perl.
 </p>
 <pre>
 perl script.pl
 </pre>
-<h4>シェルスクリプトにおけるプログラムの実行</h4>
+<h4> Executing a program in a shell script </h4>
 <p>
-  シェルスクリプトにおけるプログラムの実行。
+  Executing a program in a shell script.
 </p>
 <pre>
 sh script.sh
 </pre>
 <p>
-  シェルスクリプトでは、シェバンを書くことも多いですが、実質的にはシェルを実行するコマンドでプログラムを実行しています。
+  In shell scripts, shebangs are often written, but in reality, the program is executed by the command that executes the shell.
 </p>
-<h3>すぐにプログラムを実行することができるということの意義はなんですか?</h3>
+<h3> What is the significance of being able to execute a program immediately? </H3>
 <p>
-  プログラムを書いたときに、すぐにプログラムを実行することができるということの意義はなんでしょうか。一番の利点は、プログラムを書いて実行して確認というサイクルを数多くこなせるということです。
-</p>
-<p>
-  書く、実行、確認。書く、実行、確認。書く、実行、確認。実際のシステム開発では、このサイクルを何千回、何万回と繰り返します。
+  What is the significance of being able to run a program as soon as you write it? The biggest advantage is that you can go through many cycles of writing, executing, and checking programs.
 </p>
 <p>
-  このサイクルを素早く繰り返せるので、プログラム開発の生産効率が高いのです。
+  Write, execute, confirm. Write, execute, confirm. Write, execute, confirm. In actual system development, this cycle is repeated thousands and tens of thousands of times.
 </p>
 <p>
-  Perlがすぐに実行できるという機能は、シェルスクリプトがすぐに実行できるということを参考にして作られています。
+  Since this cycle can be repeated quickly, the production efficiency of program development is high.
 </p>
 <p>
-  Perlは現代的なスクリプト言語の元祖ですが、すぐに実行できるという部分は、シェルスクリプトの機能を参考にして作られています。
+  The ability to run Perl right away is built on the fact that shell scripts can run right away.
 </p>
 <p>
-  Perlは、内部的には、構文木にコンパイルされてから実行されるのですが、perlコマンドは、構文木へのコンパイルと実行という処理を一度に実行するように設計されています。
+  Perl is the ancestor of the modern scripting language, but its immediate execution is based on the functionality of shell scripts.
 </p>
 <p>
-  この点では、シェルスクリプトが、1行づつ実行をしていくのとは、対照的です。
+  Perl is internally compiled into a syntax tree and then executed, but the perl command is designed to compile and execute into a syntax tree all at once.
 </p>
 <p>
-  Perlは、プログラム全体に対して、文法をチェックし、文法エラーがあった場合は、コンパイルエラーになります。
+  This is in contrast to shell scripts, which execute line by line.
 </p>
 <p>
-  コンパイルされた情報は、ファイルには出力されず、メモリ上だけに存在しています。メモリ上で、コンパイルと実行という一連の流れを行うので、まるで、コンパイルなしで、実行されているように見えるのですね。コンパイル作業は一瞬で終わり、すぐに実行されます。
+  Perl checks the syntax for the entire program, and if there is a syntax error, it will result in a compilation error.
+</p>
+<p>
+  The compiled information is not output to the file, it only exists in memory. Since it is a series of compilation and execution in memory, it looks as if it is being executed without compilation. Compiling is done in a blink of an eye and is done right away.
 </p>
 
   </div>
@@ -150,8 +147,7 @@ sh script.sh
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

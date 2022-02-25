@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -26,8 +25,7 @@
 </script>
 
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YB6G48MD78"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-YB6G48MD78"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,8 +33,8 @@
 
   gtag('config', 'G-YB6G48MD78');
 </script>
-<title>Perlは単独のスコープがC言語と同じように使える - Perl Philosophy - Resolve the Mis-Understanding of Perl</title>
-<meta name="description" content="Perlは単独のスコープがC言語と同じように使えます。単独のスコープというのは、if文やfor文やwhile文と組み合わせて存在するスコープではなく、単独で定義できるスコープで、変数にスコープを与えることができるものをいいます。">
+<title> Perl can use a single scope in the same way as C language  - Perl Philosophy - Resolve the Mis-Understanding of Perl</title>
+<meta name="description" content="Perl has a single scope that can be used in the same way as C. A single scope is not a scope that exists in combination with an if statement, for statement, or while statement, but a scope that can be defined independently and that can give a scope to a variable.">
   </head>
   <body>
     <div class="container">
@@ -53,12 +51,11 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <h2><a href="/blog/20191002073518.html">Perlは単独のスコープがC言語と同じように使える</a></h2>
+    <h2><a href="/blog/20191002073518.html"> Perl can use a single scope in the same way as C language </a></h2>
 <p>
-  Perlは単独のスコープがC言語と同じように使えます。単独のスコープというのは、if文やfor文やwhile文と組み合わせて存在するスコープではなく、単独で定義できるスコープで、変数にスコープを与えることができるものをいいます。
+  Perl has a single scope that can be used in the same way as C. A single scope is not a scope that exists in combination with an if statement, for statement, or while statement, but a scope that can be defined independently and that can give a scope to a variable.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -76,31 +73,31 @@
 </div>
 
 
-<h3>Perlの単独のスコープ</h3>
+<h3> Perl's sole scope </h3>
 <p>
-  Perlの単独のスコープです。
+  Perl's sole scope.
 </p>
 <pre>
 {
   my $foo = 1;
 }
 </pre>
-<h3>C言語の単独のスコープ</h3>
+<h3> C language independent scope </h3>
 <p>
-  C言語の単独のスコープです。
+  It is the sole scope of C language.
 </p>
 <pre>
 {
   int32_t foo = 1;
 }
 </pre>
-<h3>Perlの単独のスコープとC言語の単独のスコープの比較</h3>
+<h3> Comparison of Perl's single scope and C's single scope </h3>
 <p>
-  Perlの単独のスコープとC言語の単独のスコープの比較してみましょう。「{}」という記号で、スコープを作ることができます。
+  Let's compare Perl's single scope with C's single scope. You can create a scope with the symbol "{}".
 </p>
-<h3>単独のスコープの活用法</h3>
+<h3> How to use a single scope </h3>
 <p>
-  単独のスコープは、そのスコープの中だけで、有効な変数を宣言することができるので、以下のような書き方ができて、便利です。入れ子にすることもできます。
+  A single scope can declare valid variables only within that scope, so it is convenient to write as follows. It can also be nested.
 </p>
 <pre>
 {
@@ -120,86 +117,86 @@
 }
 </pre>
 <p>
-  Perlの場合は、リファレンスカウント式のGCなので、スコープの終わりで、変数を解放してくれるという効果もあります。
+  In Perl, it's a reference-counted GC, so it also has the effect of freeing variables at the end of scope.
 </p>
 <p>
-  単独のスコープは、試験を書くときに非常に効果を発揮します。試験は、ほとんど同じことを、少しづつ変えて、何回も記述する作業だからです。サブルーチンを定義しないで、新しいスコープを記述できるというのは、とても便利なのです。
+  A single scope is very effective when writing exams. This is because the exam is the task of writing almost the same thing over and over, changing it little by little. It's very convenient to be able to write a new scope without defining a subroutine.
 </p>
 <pre>
-# テスト1
+#Test 1
 {
   my $baz = "abc";
   
-  # テスト1 - サブテスト1
+  #Test 1 --Subtest 1
   {
     my $foo = 1;
     
-    # ごにょ
+    #Gonyo
     
-    is($foo, 5);
+    is ($foo, 5);
   }
 
-  # テスト1 - サブテスト2
+  #Test 1 --Subtest 2
   {
     my $foo = 3;
     
-    # ごにょ
+    #Gonyo
     
-    is($foo, 10);
+    is ($foo, 10);
   }
 
-  # テスト1 - サブテスト3
+  #Test 1 --Subtest 3
   {
     my $foo = 10;
     
-    # ごにょ
+    #Gonyo
     
-    is($foo, -5);
+    is ($foo, -5);
   }
 }
 
-# テスト2
+#Test 2
 {
   my $baz = "def";
 
-  # テスト2 - サブテスト1
+  #Test 2 --Subtest 1
   {
     my $bar = 2;
     
-    # ごにょ
+    #Gonyo
     
-    is($bar, 3);
+    is ($bar, 3);
   }
 
-  # テスト2 - サブテスト2
+  #Test 2 --Subtest 2
   {
     my $bar = 3;
     
-    # ごにょ
+    #Gonyo
     
-    is($bar, 45);
+    is ($bar, 45);
   }
 
-  # テスト2 - サブテスト3
+  #Test 2 --Subtest 3
   {
     my $bar = 20;
     
-    # ごにょ
+    #Gonyo
     
-    is($bar, -19);
+    is ($bar, -19);
   }
 }
 </pre>
-<h3>PerlとC言語の他の類似点</h3>
+<h3> Other similarities between Perl and C </h3>
 <p>
-  この記事では、Perlの単独のスコープがC言語と似ているということを書きましたが、Perlのif文、for文、while文、インクリメント/デクリメント、演算子の優先順位、スコープ、参照概念も、C言語の文法と似ています。
+  In this article, I wrote that Perl's single scope is similar to C, but it also includes Perl's if statements, for statements, while statements, increments / decrements, operator priorities, scopes, and reference concepts. , Similar to the C language grammar.
 </p>
 <ul>
-  <li><a href="/blog/20190926072429.html">Perlのif文はC言語のif文に似ている</a></li>
-  <li><a href="/blog/20191001073128.html">Perlのwhile文は、C言語のwhile文と、同一の文法</a></li>
-  <li><a href="/blog/20190920082045.html">Perlのインクリメント/デクリメントの動作はC言語と同じ</a></li>
-  <li><a href="/blog/20191001075312.html">Perlの演算子とC言語の演算子は、種類が似ていて、優先順位が同じ</a></li>
-  <li><a href="/blog/20191002075550.html">Perlのリファレンスの機能は、C言語のポインタの機能と同じ</a></li>
+  <li> <a href="/blog/20190926072429.html"> Perl if statements are similar to C if statements</a> </li>
+  <li> <a href="/blog/20191001073128.html"> Perl while statement has the same grammar as C language while statement</a> </li>
+  <li> <a href="/blog/20190920082045.html"> Perl increments / decrements work the same as in C</a> </li>
+  <li> <a href="/blog/20191001075312.html"> Perl operators and C operators are similar in type and have the same priority</a> </li>
+  <li> <a href="/blog/20191002075550.html"> Perl reference functionality is the same as C pointer functionality</a> </li>
 </ul>
 
   </div>
@@ -227,8 +224,7 @@
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

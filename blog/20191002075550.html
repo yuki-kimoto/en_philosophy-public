@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -26,8 +25,7 @@
 </script>
 
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YB6G48MD78"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-YB6G48MD78"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,8 +33,8 @@
 
   gtag('config', 'G-YB6G48MD78');
 </script>
-<title>Perlのリファレンスの機能は、C言語のポインタの機能と似ている - Perl Philosophy - Resolve the Mis-Understanding of Perl</title>
-<meta name="description" content="Perlには、リファレンスと呼ばれる値の参照を取得できる機能がありますが、これはC言語のポインタの機能と同じものです。">
+<title> Perl reference functionality is similar to C pointer functionality  - Perl Philosophy - Resolve the Mis-Understanding of Perl</title>
+<meta name="description" content="Perl has the ability to get a reference to a value called a reference, which is similar to the functionality of a pointer in C.">
   </head>
   <body>
     <div class="container">
@@ -53,12 +51,11 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <h2><a href="/blog/20191002075550.html">Perlのリファレンスの機能は、C言語のポインタの機能と似ている</a></h2>
+    <h2><a href="/blog/20191002075550.html"> Perl reference functionality is similar to C pointer functionality </a></h2>
 <p>
-  Perlには、リファレンスと呼ばれる値の参照を取得できる機能がありますが、これはC言語のポインタの機能と同じものです。
+  Perl has the ability to get a reference to a value called a reference, which is similar to the functionality of a pointer in C.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -76,58 +73,58 @@
 </div>
 
 
-<h4>Perlのリファレンス</h4>
+<h4> Perl Reference </h4>
 <p>
-  Perlの値のリファレンスは「\」で取得できます。
+  You can get a Perl value reference with "\".
 </p>
 <pre>
 my $num = 1;
-my $num_ref = \$num;
+my $num_ref = \ $num;
 </pre>
-<h4>C言語のポインタ</h4>
+<h4> C pointer </h4>
 <p>
-  C言語では、値のアドレスを「&」で取得し、ポインタ型の変数に代入できます。
+  In C language, you can get the address of a value with "&" and assign it to a pointer type variable.
 </p>
 <pre>
 int32_t num = 1;
-int32_t* num_ptr = &amp;amp;num;
+int32_t * num_ptr = &amp; amp; num;
 </pre>
-<h4>PerlのリファレンスとC言語のポインタの比較</h4>
+<h4> Comparison of Perl reference and C pointer </h4>
 <p>
-  記号が「\」であるか「&」であるかを除いては、PerlとC言語は同じことをしています。Perlの場合はリファレンスを取得すると書いていますが、実際にはアドレスの値を取得しているだけです。C言語ではアドレス演算ができますが、Perlのリファレンスは、C言語における、アドレス演算ができないアドレス値だと考えてください。
+  Perl and C do the same thing, except that the symbol is "\" or "&". In the case of Perl, it says to get the reference, but in reality it just gets the value of the address. You can do address operations in C, but think of Perl's reference as an address value in C that you can't do.
 </p>
 <p>
-  C言語の場合は、ポインタ変数に代入していますが、Perlの場合は、型が動的なので、変数にそのまま代入できます。
+  In C language, it is assigned to a pointer variable, but in Perl, the type is dynamic, so it can be assigned to a variable as it is.
 </p>
-<h3>C言語で覚えたポインタの概念がPerlでもそのまま使える</h3>
+<h3> The concept of pointers learned in C language can be used as it is in Perl </h3>
 <p>
-  大学のソフトウェアの授業で、頑張って覚えたC言語のポインタの概念を、Perlでもそのまま活用することができます。
-</p>
-<p>
-  また、Perlからプログラミングを始めた方は、C言語のポインタに該当する機能を、Perlを使って、理解することができます。
+  You can use the concept of C language pointers that you learned hard in a university software class in Perl as they are.
 </p>
 <p>
-  PerlはC言語と同じく、<a href="/blog/20190919070918.html">値と参照を明確に区別する言語</a>です。
+  Also, if you started programming from Perl, you can use Perl to understand the functions that correspond to pointers in C language.
 </p>
 <p>
-  「値と参照の区別は隠してしまったほうがユーザーは使いやすい」という意見も一方にありますが、値と参照を区別することは、ソフトウェアのデータに関する非常に基礎的な考え方なので、区別ができるということは、メリットでもあるのです。
+  Perl, like C, is a <a href="/blog/20190919070918.html"> language that clearly distinguishes between values ​​and references</a>.
 </p>
 <p>
-  C言語より低レベルなアセンブラや機械語といった分野では、値と参照(アドレス)をしっかり区別できることが、エンジニアとしての基礎知識として求められるからです。
+  One opinion is that it's easier for users to hide the distinction between values ​​and references, but it's possible to distinguish between values ​​and references because it's a very basic idea of ​​software data. That is also a merit.
 </p>
 <p>
-  この違いを言語の個性として、とらえてみるのはいかがでしょうか?
+  In fields such as assembler and machine language, which are lower level than C language, it is required as basic knowledge as an engineer to be able to clearly distinguish between values ​​and references (addresses).
 </p>
-<h3>PerlとC言語の他の類似点</h3>
 <p>
-  この記事では、PerlのリファレンスがC言語のポインタと似ているということを書きましたが、Perlのif文、for文、while文、インクリメント/デクリメント、演算子の優先順位、スコープ、参照概念も、C言語の文法と似ています。
+  How about taking this difference as the individuality of the language?
+</p>
+<h3> Other similarities between Perl and C </h3>
+<p>
+  In this article, I wrote that Perl references are similar to C pointers, but also Perl if statements, for statements, while statements, increments / decrements, operator priorities, scopes, and reference concepts. , Similar to C language grammar.
 </p>
 <ul>
-  <li><a href="/blog/20190926072429.html">Perlのif文はC言語のif文に似ている</a></li>
-  <li><a href="/blog/20191001073128.html">Perlのwhile文は、C言語のwhile文と、同一の文法</a></li>
-  <li><a href="/blog/20190920082045.html">Perlのインクリメント/デクリメントの動作はC言語と同じ</a></li>
-  <li><a href="/blog/20191001075312.html">Perlの演算子とC言語の演算子は、種類が似ていて、優先順位が同じ</a></li>
-  <li><a href="/blog/20191002073518.html">Perlは単独のスコープがC言語と同じように使える</a></li>
+  <li> <a href="/blog/20190926072429.html"> Perl if statements are similar to C if statements</a> </li>
+  <li> <a href="/blog/20191001073128.html"> Perl while statement has the same grammar as C language while statement</a> </li>
+  <li> <a href="/blog/20190920082045.html"> Perl increments / decrements work the same as in C</a> </li>
+  <li> <a href="/blog/20191001075312.html"> Perl operators and C operators are similar in type and have the same priority</a> </li>
+  <li> <a href="/blog/20191002073518.html"> Perl can use a single scope in the same way as C</a> </li>
 </ul>
 
   </div>
@@ -155,8 +152,7 @@ int32_t* num_ptr = &amp;amp;num;
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

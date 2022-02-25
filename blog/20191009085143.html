@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -26,8 +25,7 @@
 </script>
 
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YB6G48MD78"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-YB6G48MD78"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,8 +33,8 @@
 
   gtag('config', 'G-YB6G48MD78');
 </script>
-<title>Perlでトップレベルに文が書けるのはシェルスクリプトと同じ - Perl Philosophy - Resolve the Mis-Understanding of Perl</title>
-<meta name="description" content="Perlでトップレベルに文が書けるのはシェルスクリプトと同じです。シェルスクリプトは、もともとCUIでインタラクティブに対話をするシェルのコマンドから始まって、バッチ処理を記述するために生まれました。そのため、いきなり文を書くことができます。このアイデアをPerlも採用しました。">
+<title> It is the same as a shell script that you can write a sentence at the top level in Perl  - Perl Philosophy - Resolve the Mis-Understanding of Perl</title>
+<meta name="description" content="Writing statements at the top level in Perl is the same as a shell script. Shell scripts were originally created to describe batch processing, starting with shell commands that interact interactively in the CUI. Therefore, you can write a sentence suddenly. Perl has also adopted this idea.">
   </head>
   <body>
     <div class="container">
@@ -53,12 +51,11 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <h2><a href="/blog/20191009085143.html">Perlでトップレベルに文が書けるのはシェルスクリプトと同じ</a></h2>
+    <h2><a href="/blog/20191009085143.html"> It is the same as a shell script that you can write a sentence at the top level in Perl </a></h2>
 <p>
-  Perlでトップレベルに文が書けるのはシェルスクリプトと同じです。シェルスクリプトは、もともとCUIでインタラクティブに対話をするシェルのコマンドから始まって、バッチ処理を記述するために生まれました。そのため、いきなり文を書くことができます。このアイデアをPerlも採用しました。
+  Writing statements at the top level in Perl is the same as a shell script. Shell scripts were originally created to describe batch processing, starting with shell commands that interact interactively in the CUI. Therefore, you can write a sentence suddenly. Perl has also adopted this idea.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -77,54 +74,54 @@
 
 
 <p>
-  いきなり文が書けるというのは、スクリプト言語の特徴で、関数定義を行う必要がありません。関数の定義の仕方を知らなくても、関数の使い方だけ覚えれば、すぐにプログラムを書けるというのが、スクリプト言語の良いところですね。
+  The ability to write statements suddenly is a feature of scripting languages, and there is no need to define functions. The good thing about scripting languages ​​is that you can write a program immediately by learning how to use a function without knowing how to define it.
 </p>
-<h4>Perlは文をトップレベルで書ける</h4>
+<h4> Perl can write sentences at the top level </h4>
 <p>
-  Perlは文をトップレベルで書けます。
+  Perl can write statements at the top level.
 </p>
 <pre>
-print "Hello, World!\n";
+print "Hello, World! \ N";
 </pre>
-<h4>シェルスクリプトはトップレベルで文を書ける</h4>
+<h4> Shell scripts can write sentences at the top level </h4>
 <p>
-  シェルスクリプトは文をトップレベルで書けます。
+  Shell scripts can write statements at the top level.
 </p>
 <pre>
 echo "Hello, World\n"
 </pre>
-<h3>Perlがシェルスクリプトを参考にした、トップレベルに文が書けることの意義とは</h3>
+<h3> What is the significance of Perl's ability to write sentences at the top level with reference to shell scripts? </H3>
 <p>
-  Perlは、いくつかのプログラミング言語の文法を参考にしていますが、トップレベルにいきなり文が書けるという部分は、シェルスクリプトの文法を採用しました。
+  Perl refers to the grammar of some programming languages, but adopted the grammar of shell scripts for the part where you can write sentences suddenly at the top level.
 </p>
 <p>
-  C言語の場合は、トップレベルが、関数定義です。これは、構文解析の観点から見た場合は、トップレベルと、その下のレベルで、構造が同じなのできれいです。
+  For C, the top level is the function definition. From a parsing point of view, this is pretty because the structure is the same at the top level and below.
 </p>
 <pre>
-main(int argc, char *argv[]){
+main (int argc, char * argv []) {
   
 }
 </pre>
 <p>
-  Perlとシェルと同じく、トップレベルに、文が書けます。これは、実際は関数なのですが、自動的に関数にしてくれているのです。つまり、これは、人が手軽にプログラムを書き始めるためのシンタックスシュガーなのです。
+  Like Perl and the shell, you can write sentences at the top level. This is actually a function, but it automatically turns it into a function. In short, it's syntactic sugar that makes it easy for people to start writing programs.
 </p>
 <pre>
-print "Hello, World!\n";
+print "Hello, World! \ N";
 </pre>
 <p>
-  内部では、たとえば、以下のように補われています。(実際の実装ではなく、あくまでイメージです)
+  Internally, for example, it is supplemented as follows. (It is an image, not an actual implementation)
 </p>
 <pre>
 sub main {
-  print "Hello, World!\n";
+  print "Hello, World! \ N";
 }
-main();
+main ();
 </pre>
 <p>
-  プログラムを書き始めるときに、ただ単に、すぐ書けるというだけなのですが、これが、すぐにちょっと書きたい。ワンライナーを書きたいという場合に、とても便利なのです。
+  When I start writing a program, I just can write it right away, but I want to write this a little right away. It's very convenient when you want to write a one-liner.
 </p>
 <p>
-  Perlは手軽さという点で、先輩である、シェルスクリプトをこの点で、参考にしたのですね。
+  Perl is easy, so you referred to your senior shell script in this regard.
 </p>
 
   </div>
@@ -152,8 +149,7 @@ main();
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

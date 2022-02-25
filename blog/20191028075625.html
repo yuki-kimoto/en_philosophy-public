@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -26,8 +25,7 @@
 </script>
 
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YB6G48MD78"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-YB6G48MD78"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,8 +33,8 @@
 
   gtag('config', 'G-YB6G48MD78');
 </script>
-<title>データマーケティングの構想 - Data::Marketing - Perl Philosophy - Resolve the Mis-Understanding of Perl</title>
-<meta name="description" content="Perlゼミは、Perlでできる、データマーケティングのためのモジュールを一つ作ろうと構想している。">
+<title> Data Marketing Concept --Data::Marketing  - Perl Philosophy - Resolve the Mis-Understanding of Perl</title>
+<meta name="description" content="The Perl seminar is envisioning creating a module for data marketing that can be done in Perl.">
   </head>
   <body>
     <div class="container">
@@ -53,12 +51,11 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <h2><a href="/blog/20191028075625.html">データマーケティングの構想 - Data::Marketing</a></h2>
+    <h2><a href="/blog/20191028075625.html"> Data Marketing Concept --Data::Marketing </a></h2>
 <p>
-  Perlゼミは、Perlでできる、データマーケティングのためのモジュールを一つ作ろうと構想している。
+  The Perl seminar is envisioning creating a module for data marketing that can be done in Perl.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -77,113 +74,113 @@
 
 
 <p>
-  コマンドラインで、ひとつコマンドをたたけば、データマーケティングの結果が可視化されて出力される。
+  If you hit one command on the command line, the result of data marketing will be visualized and output.
 </p>
 <p>
-  cronなどど日時のバッチプログラムにすれば、日々の情報が、HTMLとpngファイルで、出力され、可視化・レポーティングされる。
+  If you use a batch program of date and time such as cron, daily information will be output as HTML and png files, and will be visualized and reported.
 </p>
-<h3>データマーケティングモジュールには、基礎技術が必要</h3>
+<h3> Data marketing module requires basic technology </h3>
 <p>
-  ある分野のモジュールを作ろうと思ったときに、そのためには、それを構成するための基礎技術が必要である。
-</p>
-<p>
-  その技術がすでに存在していれば、自分で作る必要はなく、利用する。
+  When you want to make a module in a certain field, you need the basic technology to compose it.
 </p>
 <p>
-  もしなければ、その前に、基礎技術を開発しなければならない。
+  If the technology already exists, you don't have to make it yourself, just use it.
 </p>
 <p>
-  そして、2019年、すべてを実現できる基礎技術がPerlの分野にそろったのである。
-</p>
-<h3>入力データをどのように読み取るか</h3>
-<p>
-  データの入力として、いくつかの形式が考えられます。CSV、TSV, Excelデータ、あるいは独自のフォーマット。
+  If not, the basic technology must be developed before that.
 </p>
 <p>
-  ユーザからの入力は多種多様です。
+  And in 2019, the basic technology that can realize everything is in the field of Perl.
+</p>
+<h3> How to read the input data </​​h3>
+<p>
+  There are several possible formats for entering data. CSV, TSV, Excel data, or your own format.
 </p>
 <p>
-  ですので、自前で解析するということに加えて、プラグイン形式で、必要なフォーマットを追加できると便利です。
+  There is a wide variety of user input.
 </p>
 <p>
-  Text::CSVやSpreadsheet::ParseExcelといった、CPANモジュールを使うことで、対応ができそうですね。
-</p>
-<h3>どのように出力するか</h3>
-<p>
-  データの出力として、いくつかの形式が考えられます。最終出力が、データの要約とグラフがあるレポートであるということを考えると、HTML、Excel、PDFが有力です。
+  Therefore, in addition to analyzing by yourself, it is convenient to be able to add the required format in the plug-in format.
 </p>
 <p>
-  これも、自前で出力を作るという場合に加えて、プラグイン形式で、必要なフォーマットを追加できると便利です。
+  It seems that you can handle it by using CPAN modules such as Text::CSV and Spreadsheet::ParseExcel.
+</p>
+<h3> How to output </h3>
+<p>
+  There are several possible formats for outputting the data. Considering that the final output is a report with a summary of the data and graphs, HTML, Excel and PDF are influential.
 </p>
 <p>
-  HTMLである場合はMojolicious、Excelである場合は、Excel::Writer::XLSX、PDFである場合は、PDF::API2が使えそうです。
-</p>
-<h3>データをどのように表現するか</h3>
-<p>
-  Perlの一つの問題点は、連続した配列のデータを持っていないということです。32bit整数型、64bit整数型、32bit浮動小数点型、64bit浮動小数点型の演算を高速に行うには、XSと呼ばれる仕組みを使う必要がありますが、XSの問題点は、ユーザーが、データを加工できないということです。
+  Again, in addition to creating your own output, it would be nice to be able to add the required format in a plug-in format.
 </p>
 <p>
-  データマーケティングのためには、ユーザーが、データ処理を高速に行うことができる基盤が必要です。
+  If it is HTML, you can use Mojolicious, if it is Excel, you can use Excel::Writer::XLSX, and if it is PDF, you can use PDF::API2.
+</p>
+<h3> How to represent the data </​​h3>
+<p>
+  One problem with Perl is that it doesn't have a contiguous array of data. In order to perform 32-bit integer type, 64-bit integer type, 32-bit floating-point type, and 64-bit floating-point type operations at high speed, it is necessary to use a mechanism called XS, but the problem with XS is that the user cannot process the data. about it.
 </p>
 <p>
-  僕は、この3年間、その基盤を開発していました。それがSVPMというモジュールで、Perlに配列のデータ構造を追加し、ユーザーが、ほぼPerlの文法を使って、C言語に近いレベルのパフォーマンスで、配列操作を行うことができるようになるものです。
+  For data marketing, users need a foundation that enables them to process data at high speed.
 </p>
 <p>
-  日付の時系列データは、64bit整数の連続した値、文字列は、文字列の連続した値、統計データは、64bit浮動小数点、学習データは、32bit浮動小数点でGPU処理も可能、といったような、配列のデータ構造をPerlに追加することが、このためには、必須なのです。
+  I have been developing the foundation for the last three years. It's a module called SVPM that adds array data structures to Perl, allowing users to perform array operations with near-C-level performance, using almost Perl grammar.
 </p>
 <p>
-  Data::Marketingでは、列のデータは、動的な連続した配列として表現します。SPVMのSPVM::IntListやSPVM::LongList、SPVM::DoubleList、SPVM::FloatList、SPVM::StringListを使います。
+  Time series data of date is a continuous value of 64bit integer, character string is a continuous value of a character string, statistical data is 64bit floating point, training data is 32bit floating point and GPU processing is possible, etc. Adding the array data structure to Perl is essential for this.
 </p>
 <p>
-  列に対する計算や、列どうしの関係を求めるための演算は、連続した配列を使ってで行うことができるので、速いのです。
+  In Data::Marketing, column data is represented as a dynamic contiguous array. Use SPVM's SPVM::IntList, SPVM::LongList, SPVM::DoubleList, SPVM::FloatList, and SPVM::StringList.
 </p>
 <p>
-  またこれに加えで、次元の情報とNAの情報を持たせる必要があります。
+  Calculations for columns and operations for finding relationships between columns are fast because they can be performed using continuous arrays.
 </p>
 <p>
-  データマーケティングにおいて、取得したデータには、それを取得できなかったという情報があります。これをNAで表現できることが必要です。
+  In addition to this, it is necessary to have dimensional information and NA information.
 </p>
 <p>
-  データマーケティングにおいては、必須ではありませんが、一つの列に対して、次元のデータを持たせておくと、柔軟です。データマーケティングで提供される、データ構造が、他の分野に拡張する必要があったときに、対応可能なのです。傾向を知るために、またデータの関係性を知るために、行列計算が必要になる場合は、2次元として扱うことができると、対応可能だからです。
-</p>
-<h3>データに対する操作</h3>
-<p>
-  データに対する操作は、Excelを想像してもらえると簡単です。Excelは実は、すでに、簡便なデータマーケティングのツールなのです。ただし、データが数万件というレベルを超えてくると、パフォーマンスやメモリ効率といった面で、限界がきます。また、最初のデータがデータベースに入っている場合は、Excelに落とし込むという手作業が発生しますね。
+  In data marketing, there is information that the acquired data could not be acquired. It is necessary to be able to express this in NA.
 </p>
 <p>
-  Data::Marketingは、Excel操作の自然な拡張を目指します。データの並び替え、回帰分析、ピボットテーブル、棒グラフ、線グラフ、統計ツールなどです。
+  In data marketing, it is not essential, but it is flexible to have dimensional data for one column. When the data structure provided by data marketing needs to be extended to other areas, it can be handled. This is because if matrix calculation is required to know the tendency and the relationship of data, it can be handled if it can be treated as two-dimensional.
+</p>
+<h3> Operation on data </​​h3>
+<p>
+  Manipulating data is easy if you imagine Excel. Excel is actually already a simple data marketing tool. However, when the number of data exceeds the level of tens of thousands, there are limits in terms of performance and memory efficiency. Also, if the first data is in the database, you will have to manually drop it into Excel.
 </p>
 <p>
-  Excelは、データマーケティングのツールとして、最も利用されているUIだからです。
+  Data::Marketing aims to be a natural extension of Excel operations. Data sorting, regression analysis, pivot tables, bar charts, line charts, statistical tools and more.
 </p>
 <p>
-  Data::Marketingは、Excelのデータマーケティングの操作を拡張して、効率化、モジュール化、自動化といったPerlの良い特徴を追加するものになります。
-</p>
-<h3>データの可視化 - グラフレポート</h3>
-<p>
-  データの可視化についてですが、僕は、小さな実験を繰り返していました。Perlと小さな依存でどうやって、グラフを書いて、文字を書いて、グラフの中に画像をいれて、最終的にpngで出力するか。
+  Excel is the most used UI as a data marketing tool.
 </p>
 <p>
-  実験結果は、可能であるということです。ImagerというPerlのモジュールを使えば、2次元のグラフが書けることがわかりました。軸を書いて、メモリ軸のテキストを入れることができます。また、写真を追加することもできます。
+  Data::Marketing extends Excel's data marketing operations to add the good features of Perl, such as efficiency, modularization, and automation.
+</p>
+<h3> Data Visualization-Graph Report </h3>
+<p>
+  Regarding data visualization, I was repeating small experiments. How to draw a graph, write characters, put an image in the graph, and finally output as png with a small dependency with Perl.
 </p>
 <p>
-  Imagerは、二次元描画の基礎技術として利用して、グラフ描画のアルゴリムさえ考えれば、グラフを生成できる。
+  The experimental result is that it is possible. I found that I could draw a 2D graph using a Perl module called Imager. You can write an axis and put the text of the memory axis. You can also add a photo.
 </p>
 <p>
-  3D描画は? それは、いったん脇に置いておきましょう。まずは、できることから。
-</p>
-<h3>Perlにも未来への期待が必要だ</h3>
-<p>
-  僕は、Perlにも未来への期待が必要だと考えています。人は成長することに喜びを感じます。Perlにおいても、量的な成長、それがかなわないならば、質的な成長が必要です。
+  Imager can be used as a basic technology for two-dimensional drawing to generate graphs by considering the algorithm for drawing graphs.
 </p>
 <p>
-  それが、前に進む力になるからです。目の前の現実的な問題に対処しながら、少しの時間やお金を、新しいことに投資する。
+  What about 3D drawing? Let's set it aside. First of all, what you can do.
+</p>
+<h3> Perl also needs expectations for the future </h3>
+<p>
+  I think Perl also needs expectations for the future. People are happy to grow. Even in Perl, we need quantitative growth, and if that is not possible, qualitative growth.
 </p>
 <p>
-  この少しということが大切なのです。
+  That is the power to move forward. Invest a little time and money in new things while dealing with the real problems in front of you.
 </p>
 <p>
-  お手伝いしてくださる方がおられれば、ウェルカム、ウェルカムです!
+  This little thing is important.
+</p>
+<p>
+  If anyone can help, welcome, welcome!
 </p>
 
   </div>
@@ -211,8 +208,7 @@
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

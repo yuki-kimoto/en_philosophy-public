@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -26,8 +25,7 @@
 </script>
 
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YB6G48MD78"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-YB6G48MD78"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,8 +33,8 @@
 
   gtag('config', 'G-YB6G48MD78');
 </script>
-<title>Perlの文字列リテラルはUnix/Linuxシェルのシングルクォートとダブルクォートと似たように機能する - Perl Philosophy - Resolve the Mis-Understanding of Perl</title>
-<meta name="description" content="Perlがシェルフレンドリーなひとつの理由として、Perlの文字列リテラルはUnix/Linuxシェルのシングルクォートとダブルクォートと似たように機能することがあげられます。">
+<title> Perl string literals work like single and double quotes in Unix / Linux shells  - Perl Philosophy - Resolve the Mis-Understanding of Perl</title>
+<meta name="description" content="One reason Perl is shell-friendly is that Perl string literals are similar to  Unix / Linux shell single and double quotes. It works like this.">
   </head>
   <body>
     <div class="container">
@@ -53,12 +51,11 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <h2><a href="/blog/20201026082415.html">Perlの文字列リテラルはUnix/Linuxシェルのシングルクォートとダブルクォートと似たように機能する</a></h2>
+    <h2><a href="/blog/20201026082415.html"> Perl string literals work like single and double quotes in Unix / Linux shells </a></h2>
 <p>
-  Perlがシェルフレンドリーなひとつの理由として、Perlの文字列リテラルは<a href="https://en.linux.perlzemi.com/">Unix/Linuxシェル</a>のシングルクォートとダブルクォートと似たように機能することがあげられます。
+  One reason Perl is shell-friendly is that Perl string literals are similar to <a href="https://en.linux.perlzemi.com/"> Unix / Linux shell</a> single and double quotes. It works like this.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -76,29 +73,29 @@
 </div>
 
 
-<h3>シングルクォート文字列</h3>
+<h3> Single quote string </h3>
 <p>
-  Perlのシングルクォート文字列は、変数展開を行いません。この動作は、Unix/Linuxシェルと同じです。
+  Perl single quoted strings do not interpolate variables. This behavior is the same as the Unix / Linux shell.
 </p>
 <pre>
-# 変数展開しない(hello $name)
-my $message = 'hello $name';
+#Do not expand variables (hello $name)
+my $message ='hello $name';
 </pre>
-<h3>ダブルクォート文字列</h3>
+<h3> Double quote string </h3>
 <p>
-  Perlのダブルクォート文字列は、変数展開を行います。この動作は、Unix/Linuxシェルと同じです。
+  Perl double quoted strings do variable expansion. This behavior is the same as the Unix / Linux shell.
 </p>
 <pre>
-# 変数展開する(hello kimoto)
-my $name = 'kimoto';
+#Explode variables (hello kimoto)
+my $name ='kimoto';
 my $hessage = "hello $name";
 </pre>
 <p>
-  シェルのシングルクォートとダブルクォートと似たように動作するので、覚えておきやすいですね。
+  It works like shell single and double quotes, so it's easy to remember.
 </p>
-<h3>Perlとシェルの文字列リテラルの違いは?</h3>
+<h3> What is the difference between Perl and shell string literals? </H3>
 <p>
-  Perlとbashとの違いはあります。それはバックスラッシュ「\」が、エスケープシーケンスとして解釈されることです。Perlの場合は、どのUnix/Linux環境であってもダブルクォートの中の「\n」で改行を表現できます。エスケープシーケンスについてはC言語との類似性をPerlの開発者は選んだようです。
+  There are differences between Perl and bash. That is, the backslash "\" is interpreted as an escape sequence. In Perl, you can use "\ n" in double quotes to represent a line break in any Unix / Linux environment. It seems that Perl developers chose the similarity with C language for escape sequences.
 </p>
 
   </div>
@@ -126,8 +123,7 @@ my $hessage = "hello $name";
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

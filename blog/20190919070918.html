@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -26,8 +25,7 @@
 </script>
 
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YB6G48MD78"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-YB6G48MD78"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,8 +33,8 @@
 
   gtag('config', 'G-YB6G48MD78');
 </script>
-<title>Perlは値と参照を明確に区別する - Perl Philosophy - Resolve the Mis-Understanding of Perl</title>
-<meta name="description" content="Perlは、動的プログラミング言語ではめずらしく、値と参照を明確に区別することができるプログラミング言語です。">
+<title> Perl makes a clear distinction between values ​​and references  - Perl Philosophy - Resolve the Mis-Understanding of Perl</title>
+<meta name="description" content="Perl is a programming language that makes a clear distinction between values ​​and references, which is rare in dynamic programming languages.">
   </head>
   <body>
     <div class="container">
@@ -53,12 +51,11 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <h2><a href="/blog/20190919070918.html">Perlは値と参照を明確に区別する</a></h2>
+    <h2><a href="/blog/20190919070918.html"> Perl makes a clear distinction between values ​​and references </a></h2>
 <p>
-  Perlは、動的プログラミング言語ではめずらしく、値と参照を明確に区別することができるプログラミング言語です。
+  Perl is a programming language that makes a clear distinction between values ​​and references, which is rare in dynamic programming languages.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -77,252 +74,252 @@
 
 
 <p>
-  C言語をソフトウェアの基礎で学んでいるなら、値と参照の区別をすることは、比較的簡単です。
+  If you're learning C in the basics of software, it's relatively easy to distinguish between values ​​and references.
 </p>
 <p>
-  C言語の値とポインタに当たるものが、Perlにおける値と参照です。参照は、リファレンスとも呼ばれます。
+  The values ​​and pointers in C are the values ​​and references in Perl. References are also known as references.
 </p>
 <p>
-  まず前提として覚えておいてほしいことを先に書きます。
+  First of all, I will write what I want you to remember as a premise.
 </p>
-<h3>動的配列と連想配列</h3>
+<h3> Dynamic arrays and associative arrays </h3>
 <p>
-  Perlは、言語に動的配列と、連想配列が組み込まれています。Perl言語では、動的配列は、単に配列、連想配列は、ハッシュと呼ばれます。
+  Perl has built-in dynamic arrays and associative arrays in the language. In the Perl language, dynamic arrays are simply called arrays, and associative arrays are called hashes.
 </p>
 <pre>
-# 配列(動的配列)
+# Array (dynamic array)
 my @nums = (1, 2, 3);
 
-# ハッシュ(連想配列)
-my %person = (age =&gt; 12, name =&gt; 'kimoto');
+#Hash (associative array)
+my%person = (age =&gt; 12, name =&gt;'kimoto');
 </pre>
 <p>
-  <b>Perlで、覚えておいてほしいことは、配列とハッシュを代入できる変数は、特別な記号「@」「%」で、表現されるということです。</b>
+  <b> In Perl, keep in mind that variables to which arrays and hashes can be assigned are represented by the special symbols "@" and "%". </b>
 </p>
 <p>
-  「@」はArrayの頭文字aに似ていると覚えましょう。「%」は、キーと値が対応しているように見えると覚えましょう。
+  Remember that "@" is similar to the acronym a for Array. Remember that the "%" seems to correspond to a key and a value.
 </p>
 <p>
-  数値や文字列を代入する変数は「$」で表現されます。
+  Variables to which numbers or strings are assigned are represented by "$".
 </p>
 <pre>
-# 数値や文字列
+# Numbers and strings
 my $num = 4;
-my $name = 'kimoto';
+my $name ='kimoto';
 </pre>
-<h4>変数の対応</h4>
+<h4> Variable correspondence </h4>
 <p>
-  変数の対応を簡単に書いておきます。
+  I will briefly describe the correspondence of variables.
 </p>
 <table>
-  <tr><td>数値や文字列</td><td>$num, $name</td></tr>
-  <tr><td>配列(動的配列)</td><td>@nums</td></tr>
-  <tr><td>ハッシュ(連想配列)</td><td>%person</td></tr>
+  <tr> <td> Numbers and strings </td> <td> $num, $name </td> </tr>
+  <tr> <td> Array (dynamic array) </td> <td> @nums </td> </tr>
+  <tr> <td> Hash (associative array) </td> <td>%person </td> </tr>
 </table>
-<h3>Perlのデフォルトの代入は値のコピー</h3>
+<h3> Perl's default assignment is a copy of the value </h3>
 <p>
-  Perlは、C言語の文法を参考にしいてて、C言語を学んだ人が、学びやすい用に、配慮されています。
+  Perl is based on the grammar of C language, and is considered to be easy for those who have learned C language to learn.
 </p>
 <p>
-  C言語における代入のデフォルトの動作は、値のコピーです。Perlもこれと同じ仕様になっています。
+  The default behavior of assignments in C is copying values. Perl has the same specifications.
 </p>
-<h4>数値のコピー</h4>
+<h4> Copy of numbers </h4>
 <p>
-  数値をコピーしてみましょう。
+  Let's copy the numbers.
 </p>
 <pre>
 my $num1 = 1;
 
-# 数値のコピー
+# Copy of numbers
 my $num2 = $num2;
 </pre>
 <p>
-  1という値がコピーされます。びっくりしましたか? びっくりしませんね。C言語の言語仕様を知っている方にとっては、おなじみの動作です。
+  The value 1 is copied. Are you surprised? You are not surprised. This is a familiar operation for those who know the language specifications of C language.
 </p>
-<h4>文字列のコピー</h4>
+<h4> Copy of string </h4>
 <p>
-  文字列をコピーしてみましょう。
+  Let's copy the string.
 </p>
 <pre>
-my $name1 = 'kimoto';
+my $name1 ='kimoto';
 
-# 文字列のコピー
+#Copy of string
 my $name2 = $name1;
 </pre>
 <p>
-  さて、何が起こるでしょうか。実は、文字列は、コピーされます。 $name1を変更したとしても、$name2の値は変わりません。
+  So what will happen? In fact, the string is copied. Even if you change $name1, the value of $name2 does not change.
 </p>
 <p>
-  <b>文字列を代入したときに、コピーが行われるということが、Perlの言語仕様です。文字列を安全に、渡すことができます。</b>
+  It is a Perl language specification that a copy is made when a <b> string is assigned. You can safely pass a string. </b>
 </p>
 <p>
-  内部実装は、コピーオンライトです。パフォーマンスは非常によく、シングルスレッド上であれば、競合の問題も起こりません。
+  The internal implementation is copy-on-write. Performance is very good and there are no conflict issues on a single thread.
 </p>
-<h3>配列のコピー</h3>
+<h3> Copy of array </h3>
 <p>
-  配列をコピーしてみましょう。
+  Let's copy the array.
 </p>
 <pre>
 my @nums1 = (1, 2, 3);
 
-# 配列のコピー
+# Copy of array
 my @nums2 = @nums1;
 </pre>
 <p>
-  さて何が起こるでしょうか。配列自体が、コピーされます。@num1の要素の値を変えたとしても、@nums2の要素は変わりません。
+  What will happen now? The array itself is copied. Even if you change the value of the element of @num1, the element of @nums2 does not change.
 </p>
 <p>
-  <b>配列を代入したときに、コピーが行われるということが、Perlの言語仕様です。</b>
+  It is a Perl language specification that a copy is made when an <b> array is assigned. </b>
 </p>
-<h3>ハッシュのコピー</h3>
+<h3> Hash copy </h3>
 <p>
-  ハッシュをコピーしてみましょう。
+  Let's copy the hash.
 </p>
 <pre>
-my %person1 = (age =&gt; 12, name =&gt; 'kimoto');
+my%person1 = (age =&gt; 12, name =&gt;'kimoto');
 
-# ハッシュのコピー
-my %person2 = %person1;
+# Hash copy
+my%person2 =%person1;
 </pre>
 <p>
-  さて何が起こるでしょうか。ハッシュ自体が、コピーされます。%person1の要素の値を変えたとしても、%person2の要素は変わりません。
+  What will happen now? The hash itself is copied. Even if you change the value of the element of%person1, the element of%person2 does not change.
 </p>
 <p>
-  <b>ハッシュを代入したときに、コピーが行われるということが、Perlの言語仕様です。</b>
+  <b> It is Perl's language specification that a copy is made when a hash is assigned. </b>
 </p>
-<h4>Perlの代入のデフォルトの動作は、すべてコピー</h4>
+<h4> The default behavior for Perl assignments is all copy </h4>
 <p>
-  Perlの代入のデフォルトの動作は、すべてコピーです。
-</p>
-<p>
-  これはつまり、<b>コピー用の関数を使わなくても、言語仕様の機能だけで、基本データ構造をコピーできることを意味しています。</b>
+  The default behavior for Perl assignments is all copy.
 </p>
 <p>
-  値のコピーは、非常によく使う機能です。Perlは、言語仕様で、値のコピーができるのです。
+  This means that you can copy the basic data structure using only the language specification features, without using the <b> copy function. </b>
 </p>
 <p>
-  Perlのデフォルトの
+  Copying values ​​is a very common feature. Perl is a language specification that allows you to copy values.
 </p>
 <p>
-  まずPerlは、値と参照を明確に区別するということを覚えておきましょう。
+  Perl's default
 </p>
 <p>
-  <b>値は値そのものがコピーされ、参照においては、アドレスがコピーされます。</b>
+  First, keep in mind that Perl makes a clear distinction between values ​​and references.
 </p>
-<h3>Perlは参照というデータ構造を持つ</h3>
 <p>
-  Perlは、C言語のポインタと同じように参照を作ることができます。参照というのは、矢印をイメージしてもらうのがよいです。
+  The <b> value is a copy of the value itself, and in the reference, the address is copied. </b>
+</p>
+<h3> Perl has a data structure called a reference </h3>
+<p>
+  Perl can make references just like pointers in C. For reference, it is better to have the image of an arrow.
 </p>
 <pre>
-# 数値の参照
+# Numerical reference
 my $num = 1;
-my $num_ref = \$num;
+my $num_ref = \ $num;
 
-# 文字列の参照
-my $name = 'kimoto';
-my $name_ref = \$name;
+# String reference
+my $name ='kimoto';
+my $name_ref = \ $name;
 
-# 配列の参照
+# Array reference
 my @nums = (1, 2, 3);
-my $nums_ref = \@nums;
+my $nums_ref = \ @nums;
 
-# ハッシュの参照
-my %person = (age =&gt; 1, name =&gt; 'kimoto');
+# Hash reference
+my%person = (age =&gt; 1, name =&gt;'kimoto');
 my $person_ref = \%person;
 </pre>
 <p>
-  参照というのは、実際は、アドレス値のことで、単なる数値として保持していますから、数値を保存するのと同じように、変数は「$」で始まります。
+  A reference is actually an address value, and it's just a number, so variables start with a "$", just like storing a number.
 </p>
 <table>
-  <tr><td>数値や文字列</td><td>$num, $name</td><td>数値や文字列の参照</td><td>$num_ref, $name_ref</td></tr>
-  <tr><td>配列</td><td>@nums</td><td>配列の参照</td><td>$nums_ref</td></tr>
-  <tr><td>ハッシュ</td><td>%person</td><td>ハッシュの参照</td><td>$person_ref</td></tr>
+  <tr> <td> Numbers and strings </td> <td> $num, $name </td> <td> References to numbers and strings </td> <td> $num_ref, $name_ref </td > </tr>
+  <tr> <td> Array </td> <td> @nums </td> <td> Array Reference </td> <td> $nums_ref </td> </tr>
+  <tr> <td> hash </td> <td>%person </td> <td> hash reference </td> <td> $person_ref </td> </tr>
 </table>
 <p>
-  参照は、データのアドレスを保持していますから、参照をコピーした場合は、アドレス値がコピーされるだけで、値そのものはコピーされません。
+  The reference holds the address of the data, so if you copy the reference, it only copies the address value, not the value itself.
 </p>
 <pre>
-# 配列の参照
+# Array reference
 my @nums1 = (1, 2, 3);
-my $nums_ref1 = \@nums;
+my $nums_ref1 = \ @nums;
 
 my $nums_ref2 = $nums_ref1;
 </pre>
 <p>
-  @nums1の要素を変更した場合は、$nums_ref2が指し示す配列は、同じ配列なので、変更されたように見えます。
+  If you change the element of @nums1, the array pointed to by $nums_ref2 is the same array, so it looks like it has changed.
 </p>
-<h3>配列の参照とハッシュの参照を直接作るためのシンタックシュガー</h3>
+<h3> Syntack sugar for making array references and hash references directly </h3>
 <p>
-  Perlのソースコードを読むためには、配列の参照とハッシュの参照を直接作るためのシンタックシュガーが存在するということを、覚えておきましょう。
+  To read the Perl source code, keep in mind that there is a syntax sugar to make array references and hash references directly.
 </p>
 <pre>
 
-# 配列の参照
+# Array reference
 my @nums = (1, 2, 3);
-my $nums_ref = \@nums;
+my $nums_ref = \ @nums;
 
-# 上記は以下のように書ける
+# The above can be written as follows
 my $nums_ref = [1, 2, 3];
 
-# ハッシュの参照
-my %person = (age =&gt; 1, name =&gt; 'kimoto');
+# Hash reference
+my%person = (age =&gt; 1, name =&gt;'kimoto');
 my $person_ref = \%person;
 
-# 上記は以下のように書ける
-my $perlson_ref = {age =&gt; 1, name =&gt; 'kimoto'};
+# The above can be written as follows
+my $perlson_ref = {age =&gt; 1, name =&gt;'kimoto'};
 </pre>
-<h3>値と参照を区別できることは言語のメリット</h3>
+<h3> The advantage of language is that you can distinguish between values ​​and references </h3>
 <p>
-  Perlが誤解されているのは、Perlが値と参照を明確に区別するということが、単にわかりにくさとして、批判されてきたからです。
+  Perl is misunderstood because Perl's clear distinction between values ​​and references has been criticized simply as confusing.
 </p>
 <p>
-  Perlの悪いところを過大に見せるということが、行われてきましたが、値と参照を区別していることには、明確なメリットがあります。
+  It's been done to overstate the bad things about Perl, but the distinction between values ​​and references has a clear advantage.
 </p>
-<h4>文字列は、デフォルトでコピーされるので安全</h4>
+<h4> Strings are copied by default, so it's safe </h4>
 <p>
-  文字列が、デフォルトの動作でコピーされるということは、関数の渡した先で、書き換えられることはないということです。
-</p>
-<p>
-  文字列は、コピーされるので、関数の深い先で、文字列が書き換えられて、意図しない動作を起こすということが、起こらないのです。
+  The fact that the string is copied with the default behavior means that it will not be rewritten at the destination passed by the function.
 </p>
 <p>
-  プロジェクトが大きくなってきたときに、このありがたみを、実感できることでしょう。
-</p>
-<h4>Perlの文字列は、書き換えが可能</h4>
-<p>
-  Perlの文字列は、デフォルトで書き換えが可能です。
+  Since the string is copied, it does not happen that the string is rewritten and causes unintended behavior deep inside the function.
 </p>
 <p>
-  正規表現などで、置換を行った場合に、新しい文字列が、作られるのではなく、容量が十分に確保されている場合は、その文字列を利用できます。
+  You will realize this gratitude as your project grows.
+</p>
+<h4> Perl strings can be rewritten </h4>
+<p>
+  Perl strings can be rewritten by default.
 </p>
 <p>
-  これは、文字列処理のパフォーマンスにとって、非常にメリットです。Perlは、文字列処理のパフォーマンスが最適化できるように、言語自体も設計されています。
-</p>
-<h4>コピー関数を書く必要がない</h4>
-<p>
-  文字列のコピーは、非常によく使う機能ですが、strcopyのようなコピー関数を、プログラムの中に書く必要がありません。
+  When a replacement is performed with a regular expression, etc., a new character string is not created, but if sufficient capacity is secured, that character string can be used.
 </p>
 <p>
-  配列のコピーも時々必要になりますが、関数を書かなくても、言語仕様の機能で、コピーができます。
+  This is a huge benefit to string processing performance. Perl is also designed with the language itself to optimize string processing performance.
+</p>
+<h4> No need to write copy function </h4>
+<p>
+  Copying strings is a very common feature, but you don't have to write a copy function like strcopy in your program.
 </p>
 <p>
-  これは、Perlプログラムが、非常に短く、スマートに書けることを意味しています。
-</p>
-<h4>ソフトウェアの基礎を理解できる</h4>
-<p>
-  C言語より下の世界、たとえば、アセンブラ、機械語の世界では、メモリ上のデータは、1次元で構成されています。
+  You may need to copy the array from time to time, but you can copy it without writing a function with the language specification function.
 </p>
 <p>
-  これを、アドレス参照という概念を使って、まるで、多次元に見せるということが行われています。
+  This means that Perl programs can be written very short and smart.
+</p>
+<h4> Understand the basics of software </h4>
+<p>
+  In the world below C, for example, in assembler and machine language, the data in memory is composed of one dimension.
 </p>
 <p>
-  ソフトウェアの低レベルを理解するためには、参照の概念を理解することが不可欠です。
+  This is made to look as if it were multidimensional, using the concept of address reference.
 </p>
 <p>
-  Perlは、参照だけを持つ言語ではなく、値と参照を区別するプログラミング言語です。
+  Understanding the concept of references is essential to understanding the low levels of software.
 </p>
 <p>
-  簡単に記述できるPerlから初めて、参照というソフトウェアの基礎的な概念を学ぶことができます。
+  Perl is a programming language that distinguishes between values ​​and references, not just a language that has references only.
+</p>
+<p>
+  Beginning with Perl, which is easy to write, you can learn the basic concept of software called references.
 </p>
 
   </div>
@@ -350,8 +347,7 @@ my $perlson_ref = {age =&gt; 1, name =&gt; 'kimoto'};
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"
